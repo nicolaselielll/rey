@@ -1,0 +1,221 @@
+$bp-xl: 1248px;
+$bp-lg: 960px;
+$bp-md: 820px;
+$bp-sm: 600px;
+$bp-xs: 400px;
+
+// BREAKPOINTS
+
+@mixin bp-xl {
+    @media screen and (max-width: $bp-xl) {
+        @content;
+    }
+}
+
+@mixin bp-lg {
+    @media screen and (max-width: $bp-lg) {
+        @content;
+    }
+}
+
+@mixin bp-md {
+    @media screen and (max-width: $bp-md) {
+        @content;
+    }
+}
+
+@mixin bp-sm {
+    @media screen and (max-width: $bp-sm) {
+        @content;
+    }
+}
+
+@mixin bp-xs {
+    @media screen and (max-width: $bp-xs) {
+        @content;
+    }
+}
+
+@mixin bp-custom($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+// COLORS
+
+$complementary: #EEE;
+$secondary: rgba(238, 238, 238, 0.6);
+$dominant: #0C0C0C;
+
+// BORDER RADIUS
+
+$radius: 6.251rem;
+$radius-mobile: 4.286rem;
+
+@mixin radius {
+    border-radius: $radius;
+
+    @media screen and (max-width: $bp-lg) {
+        border-radius: $radius-mobile;
+    }
+}
+
+@mixin radius-top {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+
+    @media screen and (max-width: $bp-lg) {
+        border-top-left-radius: $radius-mobile;
+        border-top-right-radius: $radius-mobile;
+    }
+}
+
+@mixin radius-bottom {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+
+    @media screen and (max-width: $bp-lg) {
+        border-bottom-left-radius: $radius-mobile;
+        border-bottom-right-radius: $radius-mobile;
+    }
+}
+
+$radius-sm: 1.250rem;
+$radius-mobile-sm: 1.428rem;
+
+@mixin radius-sm {
+    border-radius: $radius-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        border-radius: $radius-mobile-sm;
+    }
+}
+
+@mixin radius-top-sm {
+    border-top-left-radius: $radius-sm;
+    border-top-right-radius: $radius-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        border-top-left-radius: $radius-mobile-sm;
+        border-top-right-radius: $radius-mobile-sm;
+    }
+}
+
+@mixin radius-bottom-sm {
+    border-bottom-left-radius: $radius-sm;
+    border-bottom-right-radius: $radius-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        border-bottom-left-radius: $radius-mobile-sm;
+        border-bottom-right-radius: $radius-mobile-sm;
+    }
+}
+
+// PADDINGS
+
+// padding-lg
+
+$desktop-padding: 7.501rem;
+$mobile-padding: 2.5rem;
+
+@mixin padding {
+    padding: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding;
+    }
+}
+
+@mixin padding-horizontal {
+    padding: 0 $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: 0 $mobile-padding;
+    }
+}
+
+@mixin padding-vertical {
+    padding: $desktop-padding 0;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding 0;
+    }
+}
+
+@mixin padding-right {
+    padding-right: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-right: $mobile-padding;
+    }
+}
+
+@mixin padding-left {
+    padding-left: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-left: $mobile-padding;
+    }
+}
+
+@mixin padding-top {
+    padding-top: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-top: $mobile-padding;
+    }
+}
+
+@mixin padding-bottom {
+    padding-bottom: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-bottom: $mobile-padding;
+    }
+}
+
+// padding-sm
+
+$desktop-padding-sm: 1.875rem;
+$mobile-padding-sm: 2.5rem;
+
+@mixin padding-sm {
+    padding: $desktop-padding-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding-sm;
+    }
+}
+
+@mixin padding-horizontal-sm {
+    padding: 0 $desktop-padding-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: 0 $mobile-padding-sm;
+    }
+}
+
+@mixin padding-vertical-sm {
+    padding: $desktop-padding-sm 0;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding-sm 0;
+    }
+}
+
+@mixin padding-top-sm {
+    padding-top: $desktop-padding-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-top: $mobile-padding-sm;
+    }
+}
+
+@mixin padding-bottom-sm {
+    padding-bottom: $desktop-padding-sm;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-bottom: $mobile-padding-sm;
+    }
+}

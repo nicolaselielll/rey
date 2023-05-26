@@ -1,0 +1,279 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-MediumItalic.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(../Fonts/DM_Sans/DMSans-RegularItalic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: Italic;
+}
+
+$primary-type: DM Sans;
+
+.lowercase {
+    text-transform: none !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.block {
+    display: block;
+}
+
+.bold {
+    font-weight: 700;
+}
+.medium {
+    font-weight: 500;
+}
+.light {
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    font-weight: 500;
+    font-family: $primary-type;
+    -webkit-font-smoothing: antialiased;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
+    font-family: $primary-type;
+    line-height: 1.1;
+}
+
+html {
+    font-family: $primary-type;
+}
+
+// HEADINGS
+
+.h1 {
+    font-size: 5rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 3.143rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 3.8rem;
+    }
+}
+
+.h2 {
+    font-size: 4.250rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 2.714rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 3.4rem;
+    }
+}
+
+.h3 {
+    font-size: 3.250rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 2.428rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 3rem;
+    }
+}
+
+.h4 {
+    font-size: 2.875rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1.714rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 2.4rem;
+    }
+}
+.h5 {
+    font-size: 2.4rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 2.2rem;
+    }
+}
+
+// PARAGRAPHS
+
+p {
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: $primary-type;
+}
+
+.p-lg {
+    font-size: 1.124rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1.142rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.6rem;
+    }
+}
+
+.p-md {
+    font-size: 1rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.4rem;
+    }
+}
+
+.p-sm {
+    font-size: 0.875rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 0.857rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.2rem;
+    }
+}
+.p-xs {
+    font-size: 0.75rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 0.714rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1rem;
+    }
+}
+
+// SPAN TAGS
+
+span {
+    font-weight: 500;
+    font-family: $primary-type;
+}
+
+.span-lg {
+    font-size: 1.124rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1.142rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.6rem;
+    }
+}
+
+@mixin span-md {
+    font-size: 1rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.4rem;
+    }
+}
+
+.span-md {
+    @include span-md;
+}
+
+.span-sm {
+    font-size: 0.875rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 0.857rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1.2rem;
+    }
+}
+
+.span-xs {
+    font-size: 0.75rem;
+
+    @media screen and (max-width: $bp-lg) {
+        font-size: 0.714rem;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 1rem;
+    }
+}
+
+
+a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
+}
