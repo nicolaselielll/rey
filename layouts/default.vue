@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import { useStore } from '~/stores/store.ts';
+const store = useStore();
 export default {
     setup () {
+        provide('store', store)
         return {}
     }
 }
