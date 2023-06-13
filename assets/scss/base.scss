@@ -4,6 +4,17 @@ $bp-md: 820px;
 $bp-sm: 600px;
 $bp-xs: 400px;
 
+// COLORS
+
+$complementary: #EEE;
+$secondary: rgba(238, 238, 238, 0.6);
+$dominant: #0C0C0C;
+
+html {
+    background-color: $dominant;
+    color: $complementary;
+}
+
 // BREAKPOINTS
 
 @mixin bp-xl {
@@ -41,12 +52,6 @@ $bp-xs: 400px;
         @content;
     }
 }
-
-// COLORS
-
-$complementary: #EEE;
-$secondary: rgba(238, 238, 238, 0.6);
-$dominant: #0C0C0C;
 
 // BORDER RADIUS
 

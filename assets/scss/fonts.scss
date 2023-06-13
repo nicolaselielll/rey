@@ -40,6 +40,42 @@
     font-style: Italic;
 }
 
+// 16px at 1512px vw
+$desktop-screen: 1512;
+$desktop-base-px: 16;
+$desktop-base-font-size: calc($desktop-base-px / $desktop-screen * 100); // VW
+
+// 14px at 601px vw
+$tablet-screen: 601;
+$tablet-base-px: 14;
+$tablet-base-font-size: calc($tablet-base-px / $tablet-screen * 100); // VW
+
+$mobile-base-font-size: 10; // PX
+
+html {
+    font-size: calc(1vw * $desktop-base-font-size);
+}
+
+@media only screen and (max-width: $bp-lg) {
+    html {
+        font-size: calc(1vw * $tablet-base-font-size);
+    }
+}
+
+@media only screen and (max-width: $bp-sm) {
+    html {
+        font-size: calc(1px * $mobile-base-font-size);
+    }
+
+    body,
+    html {
+        -webkit-text-size-adjust: none !important;
+        -moz-text-size-adjust: none !important;
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+    }
+}
+
 $primary-type: DM Sans;
 
 .lowercase {
@@ -97,65 +133,34 @@ html {
     font-family: $primary-type;
 }
 
+// Convert the pixel amount to vw and then to rem
+@mixin d-size($px) {
+    font-size: calc(1rem * (($px / $desktop-screen * 100) / $desktop-base-font-size));
+}
+@mixin m-size($px) {
+    @media screen and (max-width: $bp-lg) {
+        font-size: calc(1rem * (($px / $tablet-screen * 100) / $tablet-base-font-size));
+    }
+    @media screen and (max-width: $bp-sm) {
+        font-size: calc(1rem * ($px / $mobile-base-font-size));
+    }
+}
+
 // HEADINGS
 
 .h1 {
-    font-size: 5rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 3.143rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 3.8rem;
-    }
+    @include d-size(82);
+    @include m-size(38);
 }
 
 .h2 {
-    font-size: 4.250rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 2.714rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 3.4rem;
-    }
+    @include d-size(62);
+    @include m-size(32);
 }
 
 .h3 {
-    font-size: 3.250rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 2.428rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 3rem;
-    }
-}
-
-.h4 {
-    font-size: 2.875rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1.714rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 2.4rem;
-    }
-}
-.h5 {
-    font-size: 2.4rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1.7rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 2.2rem;
-    }
+    @include d-size(34);
+    @include m-size(22);
 }
 
 // PARAGRAPHS
@@ -167,50 +172,22 @@ p {
 }
 
 .p-lg {
-    font-size: 1.124rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1.142rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.6rem;
-    }
+    @include d-size(18);
+    @include m-size(16);
 }
 
 .p-md {
-    font-size: 1rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.4rem;
-    }
+    @include d-size(16);
+    @include m-size(14);
 }
 
 .p-sm {
-    font-size: 0.875rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 0.857rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.2rem;
-    }
+    @include d-size(14);
+    @include m-size(12);
 }
 .p-xs {
-    font-size: 0.75rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 0.714rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1rem;
-    }
+    @include d-size(12);
+    @include m-size(10);
 }
 
 // SPAN TAGS
@@ -221,55 +198,22 @@ span {
 }
 
 .span-lg {
-    font-size: 1.124rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1.142rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.6rem;
-    }
-}
-
-@mixin span-md {
-    font-size: 1rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 1rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.4rem;
-    }
+    @include d-size(18);
+    @include m-size(16);
 }
 
 .span-md {
-    @include span-md;
+    @include d-size(16);
+    @include m-size(14);
 }
 
 .span-sm {
-    font-size: 0.875rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 0.857rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1.2rem;
-    }
+    @include d-size(14);
+    @include m-size(12);
 }
-
 .span-xs {
-    font-size: 0.75rem;
-
-    @media screen and (max-width: $bp-lg) {
-        font-size: 0.714rem;
-    }
-
-    @media screen and (max-width: $bp-sm) {
-        font-size: 1rem;
-    }
+    @include d-size(12);
+    @include m-size(10);
 }
 
 
