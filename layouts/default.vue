@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { useStore } from '~/stores/store.ts';
+import { useStore } from '~/stores/store.js';
 const store = useStore();
 export default {
     setup () {

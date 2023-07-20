@@ -5,10 +5,6 @@
     margin: 0;
 }
 
-.section, section {
-    @include padding-horizontal();
-}
-
 .container {
     @include padding();
     overflow: hidden;
