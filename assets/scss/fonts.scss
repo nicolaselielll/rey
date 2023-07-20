@@ -4,35 +4,30 @@
     font-weight: 700;
     font-style: normal;
 }
-
 @font-face {
     font-family: "DM Sans";
     src: url(../Fonts/DM_Sans/DMSans-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
-
 @font-face {
     font-family: "DM Sans";
     src: url(../Fonts/DM_Sans/DMSans-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
-
 @font-face {
     font-family: "DM Sans";
     src: url(../Fonts/DM_Sans/DMSans-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
-
 @font-face {
     font-family: "DM Sans";
     src: url(../Fonts/DM_Sans/DMSans-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
-
 @font-face {
     font-family: "DM Sans";
     src: url(../Fonts/DM_Sans/DMSans-RegularItalic.ttf) format("truetype");
@@ -40,68 +35,22 @@
     font-style: Italic;
 }
 
-// 16px at 1512px vw
-$desktop-screen: 1512;
-$desktop-base-px: 16;
-$desktop-base-font-size: calc($desktop-base-px / $desktop-screen * 100); // VW
-
-// 14px at 601px vw
-$tablet-screen: 601;
-$tablet-base-px: 14;
-$tablet-base-font-size: calc($tablet-base-px / $tablet-screen * 100); // VW
-
-$mobile-base-font-size: 10; // PX
-
-html {
-    font-size: calc(1vw * $desktop-base-font-size);
-}
-
-@media only screen and (max-width: $bp-lg) {
-    html {
-        font-size: calc(1vw * $tablet-base-font-size);
-    }
-}
-
-@media only screen and (max-width: $bp-sm) {
-    html {
-        font-size: calc(1px * $mobile-base-font-size);
-    }
-
-    body,
-    html {
-        -webkit-text-size-adjust: none !important;
-        -moz-text-size-adjust: none !important;
-        -webkit-text-size-adjust: none !important;
-        text-size-adjust: none !important;
-    }
-}
-
 $primary-type: DM Sans;
 
 .lowercase {
     text-transform: none !important;
 }
-
 .uppercase {
     text-transform: uppercase;
 }
-
-.secondary {
-    color: $secondary;
-}
-
-.block {
-    display: block;
-}
-
 .bold {
     font-weight: 700;
 }
-.medium {
-    font-weight: 500;
+.underline {
+    text-decoration: underline;
 }
-.light {
-    font-weight: 400;
+.secondary {
+    opacity: .4;
 }
 
 h1,
@@ -113,7 +62,7 @@ h6,
 p,
 a,
 span {
-    font-weight: 500;
+    font-weight: 400;
     font-family: $primary-type;
     -webkit-font-smoothing: antialiased;
 }
@@ -126,7 +75,7 @@ span {
 .h6 {
     font-weight: 500;
     font-family: $primary-type;
-    line-height: 1.1;
+    line-height: 1.05;
 }
 
 html {
@@ -137,57 +86,38 @@ html {
 @mixin d-size($px) {
     font-size: calc(1rem * (($px / $desktop-screen * 100) / $desktop-base-font-size));
 }
-@mixin m-size($px) {
+@mixin t-size($px) {
     @media screen and (max-width: $bp-lg) {
         font-size: calc(1rem * (($px / $tablet-screen * 100) / $tablet-base-font-size));
     }
+}
+@mixin m-size($px) {
     @media screen and (max-width: $bp-sm) {
-        font-size: calc(1rem * ($px / $mobile-base-font-size));
+        font-size: calc(1rem * (($px / $mobile-screen * 100) / $mobile-base-font-size));
     }
 }
 
 // HEADINGS
 
 .h1 {
-    @include d-size(82);
-    @include m-size(38);
-}
-
-.h2 {
     @include d-size(62);
-    @include m-size(32);
-}
-
-.h3 {
-    @include d-size(34);
-    @include m-size(22);
+    @include t-size(37);
+    @include m-size(37);
 }
 
 // PARAGRAPHS
 
 p {
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.3;
     font-family: $primary-type;
-}
-
-.p-lg {
-    @include d-size(18);
-    @include m-size(16);
+    text-transform: uppercase;
 }
 
 .p-md {
-    @include d-size(16);
-    @include m-size(14);
-}
-
-.p-sm {
     @include d-size(14);
+    @include t-size(12);
     @include m-size(12);
-}
-.p-xs {
-    @include d-size(12);
-    @include m-size(10);
 }
 
 // SPAN TAGS
@@ -195,27 +125,19 @@ p {
 span {
     font-weight: 500;
     font-family: $primary-type;
-}
-
-.span-lg {
-    @include d-size(18);
-    @include m-size(16);
+    text-transform: uppercase;
 }
 
 .span-md {
-    @include d-size(16);
-    @include m-size(14);
-}
-
-.span-sm {
     @include d-size(14);
+    @include t-size(12);
     @include m-size(12);
 }
-.span-xs {
+.span-sm {
     @include d-size(12);
+    @include t-size(10);
     @include m-size(10);
 }
-
 
 a[href^=tel] {
     color: inherit;

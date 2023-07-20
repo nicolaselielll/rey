@@ -6,13 +6,51 @@ $bp-xs: 400px;
 
 // COLORS
 
-$complementary: #EEE;
-$secondary: rgba(238, 238, 238, 0.6);
-$dominant: #0C0C0C;
+$complementary: #FFF;
+$dominant: #000;
 
 html {
     background-color: $dominant;
     color: $complementary;
+}
+
+// 14px at 1512px vw
+$desktop-screen: 1512;
+$desktop-base-px: 14;
+$desktop-base-font-size: calc($desktop-base-px / $desktop-screen * 100); // VW
+
+// 12px at 700px vw
+$tablet-screen: 700;
+$tablet-base-px: 12;
+$tablet-base-font-size: calc($tablet-base-px / $tablet-screen * 100); // VW
+
+// 12px at 390px vw
+$mobile-screen: 390;
+$mobile-base-px: 10;
+$mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
+
+html {
+    font-size: calc(1vw * $desktop-base-font-size);
+}
+
+@media only screen and (max-width: $bp-lg) {
+    html {
+        font-size: calc(1vw * $tablet-base-font-size);
+    }
+}
+
+@media only screen and (max-width: $bp-sm) {
+    html {
+        font-size: calc(1vw * $mobile-base-font-size);
+    }
+
+    body,
+    html {
+        -webkit-text-size-adjust: none !important;
+        -moz-text-size-adjust: none !important;
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+    }
 }
 
 // BREAKPOINTS
@@ -51,6 +89,90 @@ html {
     @media screen and (max-width: $bp) {
         @content;
     }
+}
+// PADDINGS
+
+// padding-lg
+
+$desktop-padding: 1.67rem;
+$mobile-padding: 1rem;
+
+@mixin padding {
+    padding: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding;
+    }
+}
+
+.padding {
+    @include padding;
+}
+
+@mixin padding-x {
+    padding: 0 $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: 0 $mobile-padding;
+    }
+}
+.padding-x {
+    @include padding-x;
+}
+
+@mixin padding-y {
+    padding: $desktop-padding 0;
+
+    @media screen and (max-width: $bp-lg) {
+        padding: $mobile-padding 0;
+    }
+}
+.padding-y {
+    @include padding-y;
+}
+
+@mixin padding-right {
+    padding-right: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-right: $mobile-padding;
+    }
+}
+.padding-right {
+    @include padding-right;
+}
+
+@mixin padding-left {
+    padding-left: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-left: $mobile-padding;
+    }
+}
+.padding-left {
+    @include padding-left;
+}
+
+@mixin padding-top {
+    padding-top: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-top: $mobile-padding;
+    }
+}
+.padding-top {
+    @include padding-top;
+}
+
+@mixin padding-bottom {
+    padding-bottom: $desktop-padding;
+
+    @media screen and (max-width: $bp-lg) {
+        padding-bottom: $mobile-padding;
+    }
+}
+.padding-bottom {
+    @include padding-bottom;
 }
 
 // BORDER RADIUS
@@ -114,113 +236,5 @@ $radius-mobile-sm: 1.428rem;
     @media screen and (max-width: $bp-lg) {
         border-bottom-left-radius: $radius-mobile-sm;
         border-bottom-right-radius: $radius-mobile-sm;
-    }
-}
-
-// PADDINGS
-
-// padding-lg
-
-$desktop-padding: 7.501rem;
-$mobile-padding: 2.5rem;
-
-@mixin padding {
-    padding: $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: $mobile-padding;
-    }
-}
-
-@mixin padding-horizontal {
-    padding: 0 $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: 0 $mobile-padding;
-    }
-}
-
-@mixin padding-vertical {
-    padding: $desktop-padding 0;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: $mobile-padding 0;
-    }
-}
-
-@mixin padding-right {
-    padding-right: $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-right: $mobile-padding;
-    }
-}
-
-@mixin padding-left {
-    padding-left: $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-left: $mobile-padding;
-    }
-}
-
-@mixin padding-top {
-    padding-top: $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-top: $mobile-padding;
-    }
-}
-
-@mixin padding-bottom {
-    padding-bottom: $desktop-padding;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-bottom: $mobile-padding;
-    }
-}
-
-// padding-sm
-
-$desktop-padding-sm: 1.875rem;
-$mobile-padding-sm: 2.5rem;
-
-@mixin padding-sm {
-    padding: $desktop-padding-sm;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: $mobile-padding-sm;
-    }
-}
-
-@mixin padding-horizontal-sm {
-    padding: 0 $desktop-padding-sm;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: 0 $mobile-padding-sm;
-    }
-}
-
-@mixin padding-vertical-sm {
-    padding: $desktop-padding-sm 0;
-
-    @media screen and (max-width: $bp-lg) {
-        padding: $mobile-padding-sm 0;
-    }
-}
-
-@mixin padding-top-sm {
-    padding-top: $desktop-padding-sm;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-top: $mobile-padding-sm;
-    }
-}
-
-@mixin padding-bottom-sm {
-    padding-bottom: $desktop-padding-sm;
-
-    @media screen and (max-width: $bp-lg) {
-        padding-bottom: $mobile-padding-sm;
     }
 }
