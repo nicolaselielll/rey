@@ -50,7 +50,7 @@ $primary-type: DM Sans;
     text-decoration: underline;
 }
 .secondary {
-    opacity: .4;
+    color: $additional-2;
 }
 
 h1,
@@ -115,9 +115,9 @@ p {
 }
 
 .p-md {
-    @include d-size(14);
-    @include t-size(12);
-    @include m-size(12);
+    @include d-size(16);
+    @include t-size(16);
+    @include m-size(16);
 }
 
 // SPAN TAGS
@@ -129,14 +129,14 @@ span {
 }
 
 .span-md {
-    @include d-size(14);
-    @include t-size(12);
-    @include m-size(12);
+    @include d-size(16);
+    @include t-size(16);
+    @include m-size(16);
 }
 .span-sm {
-    @include d-size(12);
-    @include t-size(10);
-    @include m-size(10);
+    @include d-size(14);
+    @include t-size(14);
+    @include m-size(14);
 }
 
 a[href^=tel] {

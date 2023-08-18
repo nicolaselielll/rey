@@ -6,27 +6,34 @@ $bp-xs: 400px;
 
 // COLORS
 
-$complementary: #FFF;
+$accent: #FD5A1E;
 $dominant: #000;
+$complementary: #FFF;
+$border: rgba($dominant, .1);
 
-html {
+$additional-1: rgba($dominant, .8);
+$additional-2: rgba($dominant, .6);
+$additional-3: rgba($dominant, .3);
+$additional-4: rgba($dominant, .04);
+
+html, body {
     background-color: $dominant;
     color: $complementary;
 }
 
 // 14px at 1512px vw
 $desktop-screen: 1512;
-$desktop-base-px: 14;
+$desktop-base-px: 16;
 $desktop-base-font-size: calc($desktop-base-px / $desktop-screen * 100); // VW
 
 // 12px at 700px vw
 $tablet-screen: 700;
-$tablet-base-px: 12;
+$tablet-base-px: 16;
 $tablet-base-font-size: calc($tablet-base-px / $tablet-screen * 100); // VW
 
 // 12px at 390px vw
 $mobile-screen: 390;
-$mobile-base-px: 10;
+$mobile-base-px: 16;
 $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
 
 html {

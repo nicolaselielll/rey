@@ -10,6 +10,19 @@
     overflow: hidden;
 }
 
+.align-left {
+    display: flex;
+    justify-content: flex-start;
+}
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 ul {
     list-style-type: none;
     font-family: $primary-type;
@@ -20,4 +33,102 @@ ul {
         display: flex;
         align-items: center;
     }
+}
+
+// COLOR CLASSES
+
+//BG
+
+.accent-bg { 
+    background-color: $accent 
+}
+.dominant-bg {
+    background-color: $dominant;
+}
+.complementary-bg {
+    background-color: $complementary;
+}
+.additional-1-bg {
+    background-color: $additional-1;
+}
+.additional-2-bg {
+    background-color: $additional-2;
+}
+.additional-3-bg {
+    background-color: $additional-3;
+}
+.additional-4-bg {
+    background-color: $additional-4;
+}
+
+// COLOR
+
+.accent {
+    color: $accent;
+}
+.dominant {
+    color: $dominant;
+}
+.complementary {
+    color: $complementary;
+}
+.additional-1 {
+    color: $additional-1;
+}
+.additional-2 {
+    color: $additional-2;
+}
+.additional-3 {
+    color: $additional-3;
+}
+.additional-4 {
+    color: $additional-4;
+}
+
+.mix-blend {
+    mix-blend-mode: difference;
+}
+
+//BORDERS
+
+.full-border {
+    border: 1px solid $border;
+}
+.border-vertical {
+    border-width: 1px;
+
+    border-top-color: $border;
+    border-top-style: solid;
+
+    border-bottom-color: $border;
+    border-bottom-style: solid;
+}
+.border-horizontal {
+    border-width: 1px;
+
+    border-right-color: $border;
+    border-right-style: solid;
+
+    border-left-color: $border;
+    border-left-style: solid;
+}
+.border-top {
+    border-top-width: 1px;
+    border-top-color: $border;
+    border-top-style: solid;
+}
+.border-bottom {
+    border-width: 1px;
+    border-bottom-color: $border;
+    border-bottom-style: solid;
+}
+.border-right {
+    border-width: 1px;
+    border-right-color: $border;
+    border-right-style: solid;
+}
+.border-left {
+    border-width: 1px;
+    border-left-color: $border;
+    border-left-style: solid;
 }
