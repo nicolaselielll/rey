@@ -2072,10 +2072,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4, 
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-gsap@^3.11.5:
-  version "3.11.5"
-  resolved "https://registry.npmjs.org/gsap/-/gsap-3.11.5.tgz"
-  integrity sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==
+"gsap@npm:@gsap/shockingly@^3.12.2":
+  version "3.12.2"
+  resolved "https://npm.greensock.com/@gsap%2fshockingly/-/shockingly-3.12.2.tgz"
+  integrity sha512-kYmkwAQ53GzBxs+e8pu/BCzUMrfJoBSEE1JI5HB6wUGDt9yuR/XTwSNfRCBzbuzy/zR9HgqubZnU59LhOiOzwA==
 
 gzip-size@^7.0.0:
   version "7.0.0"

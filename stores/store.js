@@ -1,5 +1,11 @@
 import { defineStore } from "pinia";
 
 export const useStore = defineStore("store", () => {
-  return {};
+  var isTablet = ref(false);
+  var isMobile = ref(false);
+
+  return {
+    isTablet,
+    isMobile,
+  };
 });
