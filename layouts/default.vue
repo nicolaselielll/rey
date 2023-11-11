@@ -7,7 +7,6 @@
             <div class="slot-wrapper">
                 <slot  />
             </div>
-            <UniversalFooter class="footer" />
         </div>
     </div>
 </template>
