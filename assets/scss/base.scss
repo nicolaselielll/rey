@@ -1,4 +1,4 @@
-$bp-xl: 1248px;
+$bp-xl: 1512px;
 $bp-lg: 960px;
 $bp-md: 820px;
 $bp-sm: 600px;
@@ -41,8 +41,18 @@ $mobile-screen: 390;
 $mobile-base-px: 16;
 $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
 
+@function rem-to-vw($rem) {
+    @return (1vw * $desktop-base-font-size) * $rem;
+}
+
 html {
-    font-size: calc(1vw * $desktop-base-font-size);
+    font-size: $desktop-base-px;
+}
+
+@media only screen and (max-width: 1512px) {
+    html {
+        font-size: calc(1vw * $desktop-base-font-size);
+    }
 }
 
 @media only screen and (max-width: $bp-lg) {
