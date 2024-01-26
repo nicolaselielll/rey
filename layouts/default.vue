@@ -44,6 +44,7 @@ export default {
     
         onMounted(() => {
             window.addEventListener('resize', setResize())
+            setScreens()
         });
 
         onUnmounted(() => {

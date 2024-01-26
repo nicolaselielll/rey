@@ -80,21 +80,6 @@ html {
     font-family: $primary-type;
 }
 
-// Convert the pixel amount to vw and then to rem
-@mixin d-size($px) {
-    font-size: calc(1rem * (($px / $desktop-screen * 100) / $desktop-base-font-size));
-}
-@mixin t-size($px) {
-    @media screen and (max-width: $bp-lg) {
-        font-size: calc(1rem * (($px / $tablet-screen * 100) / $tablet-base-font-size));
-    }
-}
-@mixin m-size($px) {
-    @media screen and (max-width: $bp-sm) {
-        font-size: calc(1rem * (($px / $mobile-screen * 100) / $mobile-base-font-size));
-    }
-}
-
 // HEADINGS
 
 .h1 {
@@ -109,7 +94,6 @@ p {
     font-weight: 400;
     line-height: 1.3;
     font-family: $primary-type;
-    text-transform: uppercase;
 }
 
 .p-md {
@@ -123,7 +107,6 @@ p {
 span {
     font-weight: 500;
     font-family: $primary-type;
-    text-transform: uppercase;
 }
 
 .span-md {

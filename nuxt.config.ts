@@ -7,9 +7,15 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" },
-                { hid: 'description', name: 'description', content: 'This is the description' }
+                { hid: 'description', name: 'description', content: 'Description' }
             ],
-            link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.ico' }]
+            link: [
+                { rel: 'icon', type: 'image/svg', href: '/icons/star.svg' },
+                { href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel: 'stylesheet' }
+            ],
+            script: [
+                { src: 'https://unpkg.com/phosphor-icons', type: 'text/javascript' },
+            ]
         }
     },
     runtimeConfig: {
@@ -19,13 +25,9 @@ export default defineNuxtConfig({
     },
     modules: [
         '@pinia/nuxt',
-        "nuxt-phosphor-icons"
     ],
     build: {
         transpile: ["gsap"],
-    },
-    phosphor: {
-        prefix: "Icon",
     },
     css: ['@/assets/scss/fonts.scss'],
     vite: {

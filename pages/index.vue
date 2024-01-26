@@ -1,11 +1,8 @@
 <template>
-    <div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
+    <div class="padding-x">
+        <div class="container-lg">
+            <span>Lorem ipsum dolor sit amet</span>
+        </div>
     </div>
 </template>
 
@@ -18,12 +15,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.black {
-    height: 100vh;
-    background-color: #000;
-}
-.white {
-    height: 100vh;
-    background-color: #fff;
-}
 </style>
