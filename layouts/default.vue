@@ -12,7 +12,14 @@
         </UniversalSmoothWrapper>
         <div v-else class="touch-view">
             <div class="slot-wrapper">
-                <slot  />
+                <NuxtPage :transition="{
+                    css: transition.css,
+                    mode: transition.mode,
+                    name: transition.name,
+                    onBeforeEnter: transition.onBeforeEnter,
+                    onLeave: transition.onLeave,
+                    onEnter: transition.onEnter
+                }"/>
             </div>
         </div>
     </div>
