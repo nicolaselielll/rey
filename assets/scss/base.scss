@@ -85,10 +85,6 @@ $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
     @return (1vw * $desktop-base-font-size) * $rem;
 }
 
-/* html {
-    font-size: $desktop-base-px;
-} */
-
 html {
     // Stop growing font size when 1vw equals $large-base-px
     font-size: min(calc(1vw * $desktop-base-font-size), 1px * $large-base-px);

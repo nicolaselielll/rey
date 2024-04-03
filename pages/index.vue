@@ -1,7 +1,7 @@
 <template>
     <div class="padding-x">
         <div class="container-lg">
-            <span>Lorem ipsum dolor sit amet</span>
+            <span>Home</span>
         </div>
     </div>
 </template>

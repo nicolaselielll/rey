@@ -5,7 +5,7 @@ const state = reactive({
   transitionOnEnter: false,
 });
 
-export const useTransitionState = () => {
+export const usePageTransitionState = () => {
   const setFirstRender = () => {
     state.firstRender = true;
   };

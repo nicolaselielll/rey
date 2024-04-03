@@ -1,7 +1,14 @@
 <template>
     <div class="wrapper">
         <UniversalSmoothWrapper class="desktop-view" v-if="!store.isTablet">
-            <slot />
+            <NuxtPage :transition="{
+                css: transition.css,
+                mode: transition.mode,
+                name: transition.name,
+                onBeforeEnter: transition.onBeforeEnter,
+                onLeave: transition.onLeave,
+                onEnter: transition.onEnter
+            }"/>
         </UniversalSmoothWrapper>
         <div v-else class="touch-view">
             <div class="slot-wrapper">
@@ -18,6 +25,7 @@ export default {
     setup () {
         const store = useStore();
         provide('store', store)
+        const transition = useTransition();
 
         const setScreens = () => {
             if(window.screen.width < 960) {
@@ -53,6 +61,7 @@ export default {
 
         return {
             store,
+            transition
         }
     }
 }

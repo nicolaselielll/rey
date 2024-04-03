@@ -1,20 +1,20 @@
 import gsap from 'gsap';
 
-import { useTransitionState } from '../composables/useTransitionState';
+import { useTransitionState } from '../composables/usePageTransitionState';
 
 const { toggleComplete, toggleOnEnter } = useTransitionState();
 
 const pageTransition = {
     name: 'page-transition',
-    mode: 'out-in', // Allow transitions to overlap
+    mode: 'out-in',
     onLeave(el, done) {
-        // Do nothing with the outgoing page
+        // Outgoing page
         toggleComplete(false)
         toggleOnEnter(false)
         done();
     },
     onEnter(el, done) {
-        // Fade in the new page over the current page
+        // New page
         toggleComplete(true)
         toggleOnEnter(true)
         done()
