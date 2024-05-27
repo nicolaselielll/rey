@@ -14,12 +14,9 @@ $secondary-type: DM Sans;
 $accent: #FD5A1E;
 $dominant: #000;
 $complementary: #FFF;
-$border: rgba($dominant, .1);
+$border: rgba($complementary, .1);
 
-$additional-1: rgba($dominant, .8);
-$additional-2: rgba($dominant, .6);
-$additional-3: rgba($dominant, .3);
-$additional-4: rgba($dominant, .04);
+$additional-1: rgba($complementary, .5);
 
 html, body {
     background-color: $dominant;
@@ -90,6 +87,10 @@ html {
     font-size: min(calc(1vw * $desktop-base-font-size), 1px * $large-base-px);
 }
 
+/* html {
+    font-size: calc(1vw * $desktop-base-font-size);
+} */
+
 @include bp-xl {
     html {
         font-size: calc(1vw * $desktop-base-font-size);
@@ -145,7 +146,6 @@ $gap: 1.25rem;
 
 // padding-lg
 
-$desktop-padding-lg-amount: 6; 
 $desktop-padding: 6rem;
 $mobile-padding: 1rem;
 
