@@ -49,7 +49,7 @@ $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
 }
 
 @mixin bp-lg {
-    @media screen and (max-width: $bp-lg) {
+    @media screen and (max-width: $bp-md) {
         @content;
     }
 }
@@ -152,7 +152,7 @@ $mobile-padding: 1rem;
 @mixin padding {
     padding: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         padding: $mobile-padding;
     }
 }
@@ -162,10 +162,12 @@ $mobile-padding: 1rem;
 }
 
 @mixin padding-x {
-    padding: 0 $desktop-padding;
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
-        padding: 0 $mobile-padding;
+    @include bp-lg {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
     }
 }
 .padding-x {
@@ -173,10 +175,12 @@ $mobile-padding: 1rem;
 }
 
 @mixin padding-y {
-    padding: $desktop-padding 0;
+    padding-top: $desktop-padding;
+    padding-bottom: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
-        padding: $mobile-padding 0;
+    @include bp-lg {
+        padding-top: $mobile-padding;
+        padding-bottom: $mobile-padding;
     }
 }
 .padding-y {
@@ -186,7 +190,7 @@ $mobile-padding: 1rem;
 @mixin padding-right {
     padding-right: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         padding-right: $mobile-padding;
     }
 }
@@ -197,7 +201,7 @@ $mobile-padding: 1rem;
 @mixin padding-left {
     padding-left: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         padding-left: $mobile-padding;
     }
 }
@@ -208,7 +212,7 @@ $mobile-padding: 1rem;
 @mixin padding-top {
     padding-top: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         padding-top: $mobile-padding;
     }
 }
@@ -219,7 +223,7 @@ $mobile-padding: 1rem;
 @mixin padding-bottom {
     padding-bottom: $desktop-padding;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         padding-bottom: $mobile-padding;
     }
 }
@@ -235,7 +239,7 @@ $radius-mobile: .375rem;
 @mixin radius {
     border-radius: $radius;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-radius: $radius-mobile;
     }
 }
@@ -247,7 +251,7 @@ $radius-mobile: .375rem;
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-top-left-radius: $radius-mobile;
         border-top-right-radius: $radius-mobile;
     }
@@ -257,7 +261,7 @@ $radius-mobile: .375rem;
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-bottom-left-radius: $radius-mobile;
         border-bottom-right-radius: $radius-mobile;
     }
@@ -269,7 +273,7 @@ $radius-mobile-sm: 1.428rem;
 @mixin radius-sm {
     border-radius: $radius-sm;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-radius: $radius-mobile-sm;
     }
 }
@@ -278,7 +282,7 @@ $radius-mobile-sm: 1.428rem;
     border-top-left-radius: $radius-sm;
     border-top-right-radius: $radius-sm;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-top-left-radius: $radius-mobile-sm;
         border-top-right-radius: $radius-mobile-sm;
     }
@@ -288,7 +292,7 @@ $radius-mobile-sm: 1.428rem;
     border-bottom-left-radius: $radius-sm;
     border-bottom-right-radius: $radius-sm;
 
-    @media screen and (max-width: $bp-lg) {
+    @include bp-lg {
         border-bottom-left-radius: $radius-mobile-sm;
         border-bottom-right-radius: $radius-mobile-sm;
     }
