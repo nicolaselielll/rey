@@ -10,18 +10,6 @@
                 onEnter: transition.onEnter
             }"/>
         </UniversalSmoothWrapper>
-        <div v-else class="touch-view">
-            <div class="slot-wrapper">
-                <NuxtPage :transition="{
-                    css: transition.css,
-                    mode: transition.mode,
-                    name: transition.name,
-                    onBeforeEnter: transition.onBeforeEnter,
-                    onLeave: transition.onLeave,
-                    onEnter: transition.onEnter
-                }"/>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -35,35 +23,32 @@ export default {
         const transition = useTransition();
 
         const setScreens = () => {
-            if(window.screen.width < 960) {
+            if(window.innerWidth < 960) {
                 store.isTablet = true
             } else {
                 store.isTablet = false
             }
-            if(window.screen.width < 600) {
+            if(window.innerWidth < 600) {
                 store.isMobile = true
             } else {
                 store.isMobile = false
             }
+
+            store.isTouch = ('ontouchstart' in window || navigator.maxTouchPoints > 0) ? true : null
         }
 
+
+        var timeout;
         const setResize = () => {
-            var timeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    setScreens()
-                }, 250);
-            })
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                setScreens()
+            }, 250);
         }
     
         onMounted(() => {
-            window.addEventListener('resize', setResize())
+            window.addEventListener('resize', setResize)
             setScreens()
-        });
-
-        onUnmounted(() => {
-            ctx.revert();
         });
 
         return {

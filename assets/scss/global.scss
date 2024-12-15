@@ -18,6 +18,12 @@ body,
     overflow: hidden;
 }
 
+@mixin isTouch {
+    @media (pointer:coarse) {
+        @content
+    }
+}
+
 .bg-default {
     background-size: cover;
     background-position: center;

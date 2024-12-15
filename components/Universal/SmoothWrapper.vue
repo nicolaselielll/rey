@@ -34,6 +34,7 @@ export default {
                             speed: 2.6,
                             effects: true,
                         });
+                        store.smoother = smoother;
                     }, main.value);
                 }
             }, 100)
@@ -46,25 +47,23 @@ export default {
             ScrollTrigger.refresh()
         })
 
+        var timeout;
         const setResize = () => {
-            var timeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    setSmoother()
-                }, 250);
-            })
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                setSmoother()
+            }, 250);
         }
 
         onMounted(() => {
             setTimeout(() => {
                 setSmoother()
-                window.addEventListener('resize', setResize())
+                window.addEventListener('resize', setResize)
             }, 100)
         })
 
         onUnmounted(() => {
-            ctx.revert();
+            if(ctx) ctx.revert();
         });
 
         return {
