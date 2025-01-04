@@ -540,5 +540,5 @@ $screen-width: calc(1px * ($desktop-screen + ($desktop-screen * $percentage))); 
 
 .container-lg {
     margin: 0 auto;
-    max-width: calc($screen-width - ($desktop-padding * 2));
+    max-width: calc($screen-width - ($gap-lg * 2));
 }
