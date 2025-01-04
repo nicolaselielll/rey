@@ -6,28 +6,43 @@
 }
 
 body,
-    html {
-        -webkit-text-size-adjust: none !important;
-        -moz-text-size-adjust: none !important;
-        -webkit-text-size-adjust: none !important;
-        text-size-adjust: none !important;
-    }
-
-.container {
-    @include padding();
-    overflow: hidden;
+html {
+    -webkit-text-size-adjust: none !important;
+    -moz-text-size-adjust: none !important;
+    -webkit-text-size-adjust: none !important;
+    text-size-adjust: none !important;
 }
 
-@mixin isTouch {
-    @media (pointer:coarse) {
-        @content
-    }
+.pointer {
+    cursor: pointer
 }
 
 .bg-default {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-d {
+    @media screen and (min-width: $bp-md) {
+        display: none;
+    }
+}
+.hide-t {
+    @include bp-lg {
+        display: none;
+    }
+}
+.hide-m {
+    @include bp-sm {
+        display: none;
+    }
 }
 
 // COLOR CLASSES
@@ -40,11 +55,11 @@ body,
 .dominant-bg {
     background-color: $dominant;
 }
-.complementary-bg {
-    background-color: $complementary;
+.primary-bg {
+    background-color: $primary;
 }
-.additional-1-bg {
-    background-color: $additional-1;
+.ad-1-bg {
+    background-color: $ad-1;
 }
 
 // COLOR
@@ -55,11 +70,11 @@ body,
 .dominant {
     color: $dominant;
 }
-.complementary {
-    color: $complementary;
+.primary {
+    color: $primary;
 }
-.additional-1 {
-    color: $additional-1;
+.ad-1 {
+    color: $ad-1;
 }
 .mix-blend {
     mix-blend-mode: difference;
@@ -67,7 +82,7 @@ body,
 
 //BORDERS
 
-.full-border {
+.border-all {
     border: 1px solid $border;
 }
 .border-vertical {
