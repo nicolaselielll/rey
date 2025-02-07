@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <UniversalSmoothWrapper class="desktop-view" v-if="!store.isTablet">
+        <UniversalSmoothWrapper class="desktop-view">
             <NuxtPage :transition="{
                 css: transition.css,
                 mode: transition.mode,
