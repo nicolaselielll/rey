@@ -63,6 +63,12 @@ html {
 .ad-1-bg {
     background-color: $ad-1;
 }
+.ad-2-bg {
+    background-color: $ad-2;
+}
+.ad-3-bg {
+    background-color: $ad-3;
+}
 
 // COLOR
 
@@ -78,13 +84,31 @@ html {
 .ad-1 {
     color: $ad-1;
 }
+.ad-2 {
+    color: $ad-2;
+}
+.ad-3 {
+    color: $ad-3;
+}
 .mix-blend {
     mix-blend-mode: difference;
 }
 
+// OPACITY
+
+.ad-1-o {
+    opacity: $ad-1-o;
+}
+.ad-2-o {
+    opacity: $ad-2-o;
+}
+.ad-3-o {
+    opacity: $ad-3-o;
+}
+
 //BORDERS
 
-.border-all {
+.border-full {
     border: 1px solid $border;
 }
 .border-vertical {
