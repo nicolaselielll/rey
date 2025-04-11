@@ -21,6 +21,7 @@
     "dot-env": "^0.0.1",
     "dotenv": "^16.0.3",
     "gsap": "npm:@gsap/shockingly@^3.12.2",
+    "jspdf": "^3.0.1",
     "pinia": "^2.1.3"
   }
 }
