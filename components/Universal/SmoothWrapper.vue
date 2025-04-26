@@ -26,18 +26,16 @@ export default {
         var smoother;
 
         const setSmoother = () => {
-            setTimeout(() => {
-                if(!store.isTablet) {
-                    ctx = gsap.context(() => {
-                        smoother = ScrollSmoother.create({
-                            smooth: 1.2,
-                            speed: 2.6,
-                            effects: true,
-                        });
-                        store.smoother = smoother;
-                    }, main.value);
-                }
-            }, 100)
+            if(!store.isTablet) {
+                ctx = gsap.context(() => {
+                    smoother = ScrollSmoother.create({
+                        smooth: 1.2,
+                        speed: 2.6,
+                        effects: true,
+                    });
+                    store.smoother = smoother;
+                }, main.value);
+            }
         }
 
         watch(() => route.fullPath, () => {
@@ -58,8 +56,8 @@ export default {
         onMounted(() => {
             setTimeout(() => {
                 setSmoother()
-                window.addEventListener('resize', setResize)
-            }, 100)
+            }, 250)
+            window.addEventListener('resize', setResize)
         })
 
         onUnmounted(() => {

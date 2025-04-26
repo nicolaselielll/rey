@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import { jsPDF } from "jspdf";
 
 export const useStore = defineStore("store", () => {
   var isTablet = ref(false);
@@ -10,5 +9,7 @@ export const useStore = defineStore("store", () => {
   return {
     isTablet,
     isMobile,
+    isTouch,
+    smoother
   };
 });
