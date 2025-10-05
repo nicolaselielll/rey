@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "Reinvent Yellow",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "latest",
+    "nuxt": "^3.9.0",
     "sass": "^1.84.0",
     "sass-loader": "^16.0.4"
   },
