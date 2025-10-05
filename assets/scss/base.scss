@@ -1,27 +1,34 @@
-$bp-xl: 1512px;
+$bp-xl: 1248px;
 $bp-lg: 960px;
 $bp-md: 820px;
 $bp-sm: 600px;
 $bp-xs: 400px;
 
-$primary-type: DM Sans;
-$secondary-type: DM Sans;
+$primary-type: PP Mori;
+$secondary-type: PP Mori;
 
 // COLORS
 
-$accent: #FFF;
-$dominant: #000;
-$primary: #FFF;
+$primary: #000;
+$dominant: #FFF;
+$accent: #FE0100;
 
-$ad-1-o: .5;
-$ad-2-o: .3;
-$ad-3-o: .1;
+$success: #09F069;
+$success-alt-1: rgba($success, .1);
+$error: #D92B2B;
+$error-alt-1: rgba($error, .1);
 
-$ad-1: rgba($primary, $ad-1-o);
-$ad-2: rgba($primary, $ad-2-o);
-$ad-3: rgba($primary, $ad-3-o);
+$alt-1-o: .5;
+$alt-2-o: .08;
+$alt-3-o: .06;
+$alt-4-o: .03;
 
-$border: $ad-3;
+$alt-1: rgba($primary, $alt-1-o);
+$alt-2: rgba($primary, $alt-2-o);
+$alt-3: rgba($primary, $alt-3-o);
+$alt-4: rgba($primary, $alt-4-o);
+
+$border: $alt-3;
 
 html, body {
     background-color: $dominant;
@@ -99,12 +106,12 @@ $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
 } */
 
 html {
-    font-size: calc(1vw * $desktop-base-font-size);
+    font-size: $desktop-base-px;
 }
 
 @include bp-xl {
     html {
-        font-size: calc(1vw * $desktop-base-font-size);
+        font-size: $desktop-base-px
     }
 }
 
@@ -151,394 +158,75 @@ html {
 
 // SPACING
 
-$space-lg: 1.25rem; // 20px
-$space-md: 0.9375rem; // 15px
-$space-sm: 0.625rem; // 10px
-
-.gap-lg {
-    gap: $space-lg;
-}
-.gap-md {
-    gap: $space-md;
-}
-.gap-sm {
-    gap: $space-sm;
-}
+$space-lg: 1rem; // 14px
+$space-md: .625rem; // 10px
+$space-sm: .5rem; // 8px
 
 // PADDING
 
-// Padding LG
-
-@mixin padding-lg($direction: all) {
+@mixin padding($direction: all, $size: $space-lg) {
     @if $direction == all {
-        padding: $space-lg;
+        padding: $size;
     } @else if $direction == x {
-        padding-left: $space-lg;
-        padding-right: $space-lg;
+        padding-left: $size;
+        padding-right: $size;
     } @else if $direction == y {
-        padding-top: $space-lg;
-        padding-bottom: $space-lg;
+        padding-top: $size;
+        padding-bottom: $size;
     } @else if $direction == top {
-        padding-top: $space-lg;
+        padding-top: $size;
     } @else if $direction == right {
-        padding-right: $space-lg;
+        padding-right: $size;
     } @else if $direction == bottom {
-        padding-bottom: $space-lg;
+        padding-bottom: $size;
     } @else if $direction == left {
-        padding-left: $space-lg;
+        padding-left: $size;
     }
-}
-.padding-lg {
-    @include padding-lg(all);
-}
-.padding-lg-x {
-    @include padding-lg(x);
-}
-.padding-lg-y {
-    @include padding-lg(y);
-}
-.padding-lg-top {
-    @include padding-lg(top);
-}
-.padding-lg-right {
-    @include padding-lg(right);
-}
-.padding-lg-bottom {
-    @include padding-lg(bottom);
-}
-.padding-lg-left {
-    @include padding-lg(left);
-}
-
-// Padding MD
-
-@mixin padding-md($direction: all) {
-    @if $direction == all {
-        padding: $space-md;
-    } @else if $direction == x {
-        padding-left: $space-md;
-        padding-right: $space-md;
-    } @else if $direction == y {
-        padding-top: $space-md;
-        padding-bottom: $space-md;
-    } @else if $direction == top {
-        padding-top: $space-md;
-    } @else if $direction == right {
-        padding-right: $space-md;
-    } @else if $direction == bottom {
-        padding-bottom: $space-md;
-    } @else if $direction == left {
-        padding-left: $space-md;
-    }
-}
-.padding-md {
-    @include padding-md(all);
-}
-.padding-md-x {
-    @include padding-md(x);
-}
-.padding-md-y {
-    @include padding-md(y);
-}
-.padding-md-top {
-    @include padding-md(top);
-}
-.padding-md-right {
-    @include padding-md(right);
-}
-.padding-md-bottom {
-    @include padding-md(bottom);
-}
-.padding-md-left {
-    @include padding-md(left);
-}
-
-// Padding SM
-
-@mixin padding-sm($direction: all) {
-    @if $direction == all {
-        padding: $space-sm;
-    } @else if $direction == x {
-        padding-left: $space-sm;
-        padding-right: $space-sm;
-    } @else if $direction == y {
-        padding-top: $space-sm;
-        padding-bottom: $space-sm;
-    } @else if $direction == top {
-        padding-top: $space-sm;
-    } @else if $direction == right {
-        padding-right: $space-sm;
-    } @else if $direction == bottom {
-        padding-bottom: $space-sm;
-    } @else if $direction == left {
-        padding-left: $space-sm;
-    }
-}
-.padding-sm {
-    @include padding-sm(all);
-}
-.padding-sm-x {
-    @include padding-sm(x);
-}
-.padding-sm-y {
-    @include padding-sm(y);
-}
-.padding-sm-top {
-    @include padding-sm(top);
-}
-.padding-sm-right {
-    @include padding-sm(right);
-}
-.padding-sm-bottom {
-    @include padding-sm(bottom);
-}
-.padding-sm-left {
-    @include padding-sm(left);
 }
 
 // MARGIN
 
-// Margin LG
-@mixin margin-lg($direction: all) {
+@mixin margin($direction: all, $size: $space-lg) {
     @if $direction == all {
-        margin: $space-lg;
+        margin: $size;
     } @else if $direction == x {
-        margin-left: $space-lg;
-        margin-right: $space-lg;
+        margin-left: $size;
+        margin-right: $size;
     } @else if $direction == y {
-        margin-top: $space-lg;
-        margin-bottom: $space-lg;
+        margin-top: $size;
+        margin-bottom: $size;
     } @else if $direction == top {
-        margin-top: $space-lg;
+        margin-top: $size;
     } @else if $direction == right {
-        margin-right: $space-lg;
+        margin-right: $size;
     } @else if $direction == bottom {
-        margin-bottom: $space-lg;
+        margin-bottom: $size;
     } @else if $direction == left {
-        margin-left: $space-lg;
+        margin-left: $size;
     }
-}
-.margin-lg {
-    @include margin-lg(all);
-}
-.margin-lg-x {
-    @include margin-lg(x);
-}
-.margin-lg-y {
-    @include margin-lg(y);
-}
-.margin-lg-top {
-    @include margin-lg(top);
-}
-.margin-lg-right {
-    @include margin-lg(right);
-}
-.margin-lg-bottom {
-    @include margin-lg(bottom);
-}
-.margin-lg-left {
-    @include margin-lg(left);
-}
-
-// Margin MD
-@mixin margin-md($direction: all) {
-    @if $direction == all {
-        margin: $space-md;
-    } @else if $direction == x {
-        margin-left: $space-md;
-        margin-right: $space-md;
-    } @else if $direction == y {
-        margin-top: $space-md;
-        margin-bottom: $space-md;
-    } @else if $direction == top {
-        margin-top: $space-md;
-    } @else if $direction == right {
-        margin-right: $space-md;
-    } @else if $direction == bottom {
-        margin-bottom: $space-md;
-    } @else if $direction == left {
-        margin-left: $space-md;
-    }
-}
-.margin-md {
-    @include margin-md(all);
-}
-.margin-md-x {
-    @include margin-md(x);
-}
-.margin-md-y {
-    @include margin-md(y);
-}
-.margin-md-top {
-    @include margin-md(top);
-}
-.margin-md-right {
-    @include margin-md(right);
-}
-.margin-md-bottom {
-    @include margin-md(bottom);
-}
-.margin-md-left {
-    @include margin-md(left);
-}
-
-// Margin SM
-@mixin margin-sm($direction: all) {
-    @if $direction == all {
-        margin: $space-sm;
-    } @else if $direction == x {
-        margin-left: $space-sm;
-        margin-right: $space-sm;
-    } @else if $direction == y {
-        margin-top: $space-sm;
-        margin-bottom: $space-sm;
-    } @else if $direction == top {
-        margin-top: $space-sm;
-    } @else if $direction == right {
-        margin-right: $space-sm;
-    } @else if $direction == bottom {
-        margin-bottom: $space-sm;
-    } @else if $direction == left {
-        margin-left: $space-sm;
-    }
-}
-.margin-sm {
-    @include margin-sm(all);
-}
-.margin-sm-x {
-    @include margin-sm(x);
-}
-.margin-sm-y {
-    @include margin-sm(y);
-}
-.margin-sm-top {
-    @include margin-sm(top);
-}
-.margin-sm-right {
-    @include margin-sm(right);
-}
-.margin-sm-bottom {
-    @include margin-sm(bottom);
-}
-.margin-sm-left {
-    @include margin-sm(left);
 }
 
 // BORDER RADIUS
 
-$radius-lg: 1.25rem;
-$radius-md: 0.875rem;
-$radius-sm: 0.625rem;
-
-// Border Radius LG
-@mixin border-radius-lg($direction: all) {
-    @if $direction == all {
-        border-radius: $radius-lg;
-    } @else if $direction == left {
-        border-top-left-radius: $radius-lg;
-        border-bottom-left-radius: $radius-lg;
-    } @else if $direction == right {
-        border-top-right-radius: $radius-lg;
-        border-bottom-right-radius: $radius-lg;
-    } @else if $direction == top {
-        border-top-left-radius: $radius-lg;
-        border-top-right-radius: $radius-lg;
-    } @else if $direction == bottom {
-        border-bottom-left-radius: $radius-lg;
-        border-bottom-right-radius: $radius-lg;
-    }
-}
-.radius-lg {
-    @include border-radius-lg(all);
-}
-.radius-lg-left {
-    @include border-radius-lg(left);
-}
-.radius-lg-right {
-    @include border-radius-lg(right);
-}
-.radius-lg-top {
-    @include border-radius-lg(top);
-}
-.radius-lg-bottom {
-    @include border-radius-lg(bottom);
-}
+$radius-lg: 1.0625rem;
+$radius-md: 0.8125rem;
+$radius-sm: 0.4375rem;
 
 // Radius MD
-@mixin radius-md($direction: all) {
+@mixin radius($direction: all, $size: $radius-lg) {
     @if $direction == all {
-        border-radius: $radius-md;
+        border-radius: $size;
     } @else if $direction == left {
-        border-top-left-radius: $radius-md;
-        border-bottom-left-radius: $radius-md;
+        border-top-left-radius: $size;
+        border-bottom-left-radius: $size;
     } @else if $direction == right {
-        border-top-right-radius: $radius-md;
-        border-bottom-right-radius: $radius-md;
+        border-top-right-radius: $size;
+        border-bottom-right-radius: $size;
     } @else if $direction == top {
-        border-top-left-radius: $radius-md;
-        border-top-right-radius: $radius-md;
+        border-top-left-radius: $size;
+        border-top-right-radius: $size;
     } @else if $direction == bottom {
-        border-bottom-left-radius: $radius-md;
-        border-bottom-right-radius: $radius-md;
+        border-bottom-left-radius: $size;
+        border-bottom-right-radius: $size;
     }
-}
-.radius-md {
-    @include radius-md(all);
-}
-.radius-md-left {
-    @include radius-md(left);
-}
-.radius-md-right {
-    @include radius-md(right);
-}
-.radius-md-top {
-    @include radius-md(top);
-}
-.radius-md-bottom {
-    @include radius-md(bottom);
-}
-
-// Radius SM
-@mixin radius-sm($direction: all) {
-    @if $direction == all {
-        border-radius: $radius-sm;
-    } @else if $direction == left {
-        border-top-left-radius: $radius-sm;
-        border-bottom-left-radius: $radius-sm;
-    } @else if $direction == right {
-        border-top-right-radius: $radius-sm;
-        border-bottom-right-radius: $radius-sm;
-    } @else if $direction == top {
-        border-top-left-radius: $radius-sm;
-        border-top-right-radius: $radius-sm;
-    } @else if $direction == bottom {
-        border-bottom-left-radius: $radius-sm;
-        border-bottom-right-radius: $radius-sm;
-    }
-}
-.radius-sm {
-    @include radius-sm(all);
-}
-.radius-sm-left {
-    @include radius-sm(left);
-}
-.radius-sm-right {
-    @include radius-sm(right);
-}
-.radius-sm-top {
-    @include radius-sm(top);
-}
-.radius-sm-bottom {
-    @include radius-sm(bottom);
-}
-
-// CONTAINERS
-
-$difference: calc($large-base-px - $desktop-base-px); // 4px // The difference between the large px and base font size
-$percentage: calc($difference / $desktop-base-px); // 25% // The percentage of the difference when $desktop-screen is 100%
-$screen-width: calc(1px * ($desktop-screen + ($desktop-screen * $percentage))); // 1890px // Now add the difference percentage to the $desktop-screen and you get the screen width where the font stops growing
-
-.container-lg {
-    margin: 0 auto;
-    max-width: calc($screen-width - ($space-lg * 2));
 }

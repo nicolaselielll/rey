@@ -1,0 +1,657 @@
+@use "@/assets/scss/base.scss" as *;
+// SPACING VARIABLES (CSS custom properties)
+:root {
+    --space-lg: #{$space-lg};
+    --space-md: #{$space-md};
+    --space-sm: #{$space-sm};
+}
+
+.pointer {
+    cursor: pointer
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text-ellipsis-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+
+.bg-default {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// FLEX & GRID
+.display-block {
+    display: block;
+}
+.display-inline {
+    display: inline;
+}
+.display-inline-block {
+    display: inline-block;
+}
+.display-inline-flex {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.display-none {
+    display: none;
+}
+.flex {
+    display: flex;
+}
+.display-flex {
+    display: flex;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+
+// WIDTH & HEIGHT
+.width-100 {
+    width: 100%;
+}
+.height-100 {
+    height: 100%;
+}
+.max-width-100 {
+    max-width: 100%;
+}
+.max-height-100 {
+    max-height: 100%;
+}
+.min-width-100 {
+    min-width: 100%;
+}
+.min-height-100 {
+    min-height: 100%;
+}
+.min-width-0 {
+    min-width: 0
+}
+.min-height-0 {
+    min-height: 0;
+}
+
+.height-lg {
+    height: $space-lg;
+    min-height: $space-lg;
+    max-height: $space-lg;
+}
+.height-md {
+    height: $space-md;
+    min-height: $space-md;
+    max-height: $space-md;
+}
+.height-sm {
+    height: $space-sm;
+    min-height: $space-sm;
+    max-height: $space-sm;
+}
+.width-lg {
+    width: $space-lg;
+    min-width: $space-lg;
+    max-width: $space-lg;
+}
+.width-md {
+    width: $space-md;
+    min-width: $space-md;
+    max-width: $space-md;
+}
+.width-sm {
+    width: $space-sm;
+    min-width: $space-sm;
+    max-width: $space-sm;
+}
+
+// OVERFLOW
+.overflow-auto {
+    overflow: auto;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-visible {
+    overflow: visible;
+}
+.overflow-scroll {
+    overflow: scroll;
+}
+.overflow-scroll-y {
+    overflow-y: scroll;
+}
+.overflow-scroll-x {
+    overflow-x: scroll;
+}
+
+// POSITION UTILITY CLASSES
+.position-static {
+    position: static;
+}
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position: fixed;
+}
+.position-sticky {
+    position: sticky;
+}
+
+// TOP, RIGHT, BOTTOM, LEFT
+.top-0    { top: 0; }
+.right-0  { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+
+.top-50    { top: 50%; }
+.right-50  { right: 50%; }
+.bottom-50 { bottom: 50%; }
+.left-50   { left: 50%; }
+
+.top-auto    { top: auto; }
+.right-auto  { right: auto; }
+.bottom-auto { bottom: auto; }
+.left-auto   { left: auto; }
+
+// CENTERING ABSOLUTE/FIXED ELEMENTS
+.position-absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.position-absolute-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.position-absolute-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.position-fixed-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.display-grid {
+    display: grid;
+}
+.grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+.grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+.grid-cols-7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+.grid-cols-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+.grid-cols-9 {
+    grid-template-columns: repeat(9, 1fr);
+}
+.grid-cols-10 {
+    grid-template-columns: repeat(10, 1fr);
+}
+.grid-cols-11 {
+    grid-template-columns: repeat(11, 1fr);
+}
+.grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.align-between {
+    align-items: space-between;
+}
+.align-center {
+    align-items: center;
+}
+.align-start {
+    align-items: flex-start;
+}
+.align-end {
+    align-items: flex-end;
+}
+
+// HIDE
+
+.hide-d {
+    @media screen and (min-width: $bp-md) {
+        display: none;
+    }
+}
+.hide-t {
+    @include bp-lg {
+        display: none;
+    }
+}
+.hide-m {
+    @include bp-sm {
+        display: none;
+    }
+}
+
+// COLOR CLASSES
+
+// Background Colors
+.accent-bg {
+    background-color: $accent;
+}
+.dominant-bg {
+    background-color: $dominant;
+}
+.primary-bg {
+    background-color: $primary;
+}
+.alt-1-bg {
+    background-color: $alt-1;
+}
+.alt-2-bg {
+    background-color: $alt-2;
+}
+.alt-3-bg {
+    background-color: $alt-3;
+}
+.alt-4-bg {
+    background-color: $alt-4;
+}
+.success-bg {
+    background-color: $success;
+}
+.error-bg {
+    background-color: $error;
+}
+.success-alt-1-bg {
+    background-color: $success-alt-1;
+}
+.error-alt-1-bg {
+    background-color: $error-alt-1;
+}
+
+// Text Colors
+.accent {
+    color: $accent;
+}
+.dominant {
+    color: $dominant;
+}
+.primary {
+    color: $primary;
+}
+.alt-1 {
+    color: $alt-1;
+}
+.alt-2 {
+    color: $alt-2;
+}
+.alt-3 {
+    color: $alt-3;
+}
+.alt-4 {
+    color: $alt-4;
+}
+.success {
+    color: $success;
+}
+.error {
+    color: $error;
+}
+.success-alt-1 {
+    color: $success-alt-1;
+}
+.error-light {
+    color: $error-alt-1;
+}
+
+// Opacity Classes
+.alt-1-o {
+    opacity: $alt-1-o;
+}
+.alt-2-o {
+    opacity: $alt-2-o;
+}
+.alt-3-o {
+    opacity: $alt-3-o;
+}
+.alt-4-o {
+    opacity: $alt-4-o;
+}
+
+.hover-primary {
+    transition: color .1s ease;
+    * {
+        transition: color .1s ease;
+    }
+    &:hover {
+        color: $primary;
+        * {
+            color: $primary;
+        }
+    }
+}
+
+// Mixed Blend Mode
+.mix-blend {
+    mix-blend-mode: difference;
+}
+
+// BORDERS
+
+.border-full {
+    border: 1px solid $border;
+}
+.border-y {
+    border-width: 1px;
+
+    border-top-color: $border;
+    border-top-style: solid;
+
+    border-bottom-color: $border;
+    border-bottom-style: solid;
+}
+.border-x {
+    border-width: 1px;
+
+    border-right-color: $border;
+    border-right-style: solid;
+
+    border-left-color: $border;
+    border-left-style: solid;
+}
+.border-top {
+    border-top-width: 1px;
+    border-top-color: $border;
+    border-top-style: solid;
+}
+.border-bottom {
+    border-width: 1px;
+    border-bottom-color: $border;
+    border-bottom-style: solid;
+}
+.border-right {
+    border-width: 1px;
+    border-right-color: $border;
+    border-right-style: solid;
+}
+.border-left {
+    border-width: 1px;
+    border-left-color: $border;
+    border-left-style: solid;
+}
+
+.success-border {
+    border-color: $success-alt-1;
+}
+.error-border {
+    border-color: $error-alt-1;
+}
+
+// Gap
+
+.gap-lg {
+    gap: $space-lg; // 16px
+}
+.gap-md {
+    gap: $space-md; // 10px
+}
+.gap-sm {
+    gap: $space-sm; // 8px
+}
+
+// Padding LG
+
+.padding-lg {
+    @include padding(all, $space-lg);
+}
+.padding-lg-x {
+    @include padding(x, $space-lg);
+}
+.padding-lg-y {
+    @include padding(y, $space-lg);
+}
+.padding-lg-top {
+    @include padding(top, $space-lg);
+}
+.padding-lg-right {
+    @include padding(right, $space-lg);
+}
+.padding-lg-bottom {
+    @include padding(bottom, $space-lg);
+}
+.padding-lg-left {
+    @include padding(left, $space-lg);
+}
+
+// Padding MD
+
+.padding-md {
+    @include padding(all, $space-md);
+}
+.padding-md-x {
+    @include padding(x, $space-md);
+}
+.padding-md-y {
+    @include padding(y, $space-md);
+}
+.padding-md-top {
+    @include padding(top, $space-md);
+}
+.padding-md-right {
+    @include padding(right, $space-md);
+}
+.padding-md-bottom {
+    @include padding(bottom, $space-md);
+}
+.padding-md-left {
+    @include padding(left, $space-md);
+}
+
+// Padding SM
+
+.padding-sm {
+    @include padding(all, $space-sm);
+}
+.padding-sm-x {
+    @include padding(x, $space-sm);
+}
+.padding-sm-y {
+    @include padding(y, $space-sm);
+}
+.padding-sm-top {
+    @include padding(top, $space-sm);
+}
+.padding-sm-right {
+    @include padding(right, $space-sm);
+}
+.padding-sm-bottom {
+    @include padding(bottom, $space-sm);
+}
+.padding-sm-left {
+    @include padding(left, $space-sm);
+}
+
+// Margin LG
+
+.margin-lg {
+    @include margin(all, $space-lg);
+}
+.margin-lg-x {
+    @include margin(x, $space-lg);
+}
+.margin-lg-y {
+    @include margin(y, $space-lg);
+}
+.margin-lg-top {
+    @include margin(top, $space-lg);
+}
+.margin-lg-right {
+    @include margin(right, $space-lg);
+}
+.margin-lg-bottom {
+    @include margin(bottom, $space-lg);
+}
+.margin-lg-left {
+    @include margin(left, $space-lg);
+}
+
+// Margin MD
+
+.margin-md {
+    @include margin(all, $space-md);
+}
+.margin-md-x {
+    @include margin(x, $space-md);
+}
+.margin-md-y {
+    @include margin(y, $space-md);
+}
+.margin-md-top {
+    @include margin(top, $space-md);
+}
+.margin-md-right {
+    @include margin(right, $space-md);
+}
+.margin-md-bottom {
+    @include margin(bottom, $space-md);
+}
+.margin-md-left {
+    @include margin(left, $space-md);
+}
+
+// Margin SM
+
+.margin-sm {
+    @include margin(all, $space-sm);
+}
+.margin-sm-x {
+    @include margin(x, $space-sm);
+}
+.margin-sm-y {
+    @include margin(y, $space-sm);
+}
+.margin-sm-top {
+    @include margin(top, $space-sm);
+}
+.margin-sm-right {
+    @include margin(right, $space-sm);
+}
+.margin-sm-bottom {
+    @include margin(bottom, $space-sm);
+}
+.margin-sm-left {
+    @include margin(left, $space-sm);
+}
+
+// BORDER RADIUS
+
+// Radius LG
+
+.radius-lg {
+    @include radius(all, $radius-lg);
+}
+.radius-lg-left {
+    @include radius(left, $radius-lg);
+}
+.radius-lg-right {
+    @include radius(right, $radius-lg);
+}
+.radius-lg-top {
+    @include radius(top, $radius-lg);
+}
+.radius-lg-bottom {
+    @include radius(bottom, $radius-lg);
+}
+
+// Radius MD
+
+.radius-md {
+    @include radius(all, $radius-md);
+}
+.radius-md-left {
+    @include radius(left, $radius-md);
+}
+.radius-md-right {
+    @include radius(right, $radius-md);
+}
+.radius-md-top {
+    @include radius(top, $radius-md);
+}
+.radius-md-bottom {
+    @include radius(bottom, $radius-md);
+}

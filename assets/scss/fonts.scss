@@ -1,40 +1,16 @@
 @use "@/assets/scss/base.scss" as *;
 
 @font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-Bold.ttf) format("truetype");
+    font-family: "PP Mori";
+    src: url(../Fonts/PP_Mori/PPMori-Medium.woff2) format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-BoldItalic.ttf) format("truetype");
+    font-family: "PP Mori";
+    src: url(../Fonts/PP_Mori/PPMori-BoldItalic.woff2) format("woff2");
     font-weight: 700;
     font-style: italic;
-}
-@font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-Medium.ttf) format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-MediumItalic.ttf) format("truetype");
-    font-weight: 500;
-    font-style: italic;
-}
-@font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-Regular.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "DM Sans";
-    src: url(../Fonts/DM_Sans/DMSans-RegularItalic.ttf) format("truetype");
-    font-weight: 400;
-    font-style: Italic;
 }
 
 .lowercase {
@@ -48,9 +24,6 @@
 }
 .underline {
     text-decoration: underline;
-}
-.secondary {
-    color: $ad-1;
 }
 
 h1,
@@ -84,10 +57,10 @@ html {
 
 // HEADINGS
 
-.h1 {
-    @include d-size(62);
-    @include t-size(37);
-    @include m-size(37);
+.h2 {
+    @include d-size(48);
+    @include t-size(24);
+    @include m-size(24);
 }
 
 // PARAGRAPHS
@@ -109,6 +82,7 @@ p {
 span {
     font-weight: 500;
     font-family: $primary-type;
+    line-height: 1;
 }
 
 .span-md {
