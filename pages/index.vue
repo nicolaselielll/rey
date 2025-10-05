@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <span class="span-lg">Reinvent Yellow website coming soon...</span>
+        <span class="span-lg">Reinvent Yellow website coming soon</span>
     </div>
 </template>
 
