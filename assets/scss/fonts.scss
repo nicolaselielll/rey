@@ -58,6 +58,7 @@ html {
 // HEADINGS
 
 .h2 {
+    letter-spacing: -0.02em;
     @include d-size(48);
     @include t-size(24);
     @include m-size(24);
