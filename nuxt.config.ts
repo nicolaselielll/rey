@@ -3,12 +3,12 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
     app: {
         head: {
-            titleTemplate: '%s - From Nordic roots to global reach',
+            titleTemplate: '%s - Sales company, financing partner, tech innovator, story enabler.',
             title: 'Reinvent Yellow',
             meta: [
                 { charset: 'utf-8' },
                 { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" },
-                { hid: 'description', name: 'description', content: 'We unite creativity, capital, and technology to build stories that travel.' }
+                { hid: 'description', name: 'description', content: 'From Nordic roots to global reach. We unite creativity, capital, and technology to build stories that travel.' }
             ],
             link: [
                 { rel: 'icon', type: 'image/svg', href: '/logo.svg' },
