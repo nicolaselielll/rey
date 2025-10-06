@@ -188,6 +188,26 @@
 .bottom-auto { bottom: auto; }
 .left-auto   { left: auto; }
 
+// TOP SPACE VARIATIONS
+.top-sm { top: $space-sm; }
+.top-md { top: $space-md; }
+.top-lg { top: $space-lg; }
+
+// RIGHT SPACE VARIATIONS
+.right-sm { right: $space-sm; }
+.right-md { right: $space-md; }
+.right-lg { right: $space-lg; }
+
+// BOTTOM SPACE VARIATIONS
+.bottom-sm { bottom: $space-sm; }
+.bottom-md { bottom: $space-md; }
+.bottom-lg { bottom: $space-lg; }
+
+// LEFT SPACE VARIATIONS
+.left-sm { left: $space-sm; }
+.left-md { left: $space-md; }
+.left-lg { left: $space-lg; }
+
 // CENTERING ABSOLUTE/FIXED ELEMENTS
 .position-absolute-center {
     position: absolute;
@@ -212,7 +232,7 @@
     transform: translate(-50%, -50%);
 }
 
-.display-grid {
+.grid {
     display: grid;
 }
 .grid-cols-1 {
@@ -319,12 +339,6 @@
 .alt-2-bg {
     background-color: $alt-2;
 }
-.alt-3-bg {
-    background-color: $alt-3;
-}
-.alt-4-bg {
-    background-color: $alt-4;
-}
 .success-bg {
     background-color: $success;
 }
@@ -354,12 +368,6 @@
 .alt-2 {
     color: $alt-2;
 }
-.alt-3 {
-    color: $alt-3;
-}
-.alt-4 {
-    color: $alt-4;
-}
 .success {
     color: $success;
 }
@@ -380,12 +388,7 @@
 .alt-2-o {
     opacity: $alt-2-o;
 }
-.alt-3-o {
-    opacity: $alt-3-o;
-}
-.alt-4-o {
-    opacity: $alt-4-o;
-}
+
 
 .hover-primary {
     transition: color .1s ease;
@@ -456,6 +459,50 @@
     border-color: $error-alt-1;
 }
 
+// Border Dominant Variations
+
+.border-full-dominant {
+    border: 1px solid $border-dominant;
+}
+.border-y-dominant {
+    border-width: 1px;
+
+    border-top-color: $border-dominant;
+    border-top-style: solid;
+
+    border-bottom-color: $border-dominant;
+    border-bottom-style: solid;
+}
+.border-x-dominant {
+    border-width: 1px;
+
+    border-right-color: $border-dominant;
+    border-right-style: solid;
+
+    border-left-color: $border-dominant;
+    border-left-style: solid;
+}
+.border-top-dominant {
+    border-top-width: 1px;
+    border-top-color: $border-dominant;
+    border-top-style: solid;
+}
+.border-bottom-dominant {
+    border-width: 1px;
+    border-bottom-color: $border-dominant;
+    border-bottom-style: solid;
+}
+.border-right-dominant {
+    border-width: 1px;
+    border-right-color: $border-dominant;
+    border-right-style: solid;
+}
+.border-left-dominant {
+    border-width: 1px;
+    border-left-color: $border-dominant;
+    border-left-style: solid;
+}
+
 // Gap
 
 .gap-lg {
@@ -473,22 +520,22 @@
 .padding-lg {
     @include padding(all, $space-lg);
 }
-.padding-lg-x {
+.padding-x-lg {
     @include padding(x, $space-lg);
 }
-.padding-lg-y {
+.padding-y-lg {
     @include padding(y, $space-lg);
 }
-.padding-lg-top {
+.padding-top-lg {
     @include padding(top, $space-lg);
 }
-.padding-lg-right {
+.padding-right-lg {
     @include padding(right, $space-lg);
 }
-.padding-lg-bottom {
+.padding-bottom-lg {
     @include padding(bottom, $space-lg);
 }
-.padding-lg-left {
+.padding-left-lg {
     @include padding(left, $space-lg);
 }
 
@@ -497,22 +544,22 @@
 .padding-md {
     @include padding(all, $space-md);
 }
-.padding-md-x {
+.padding-x-md {
     @include padding(x, $space-md);
 }
-.padding-md-y {
+.padding-y-md {
     @include padding(y, $space-md);
 }
-.padding-md-top {
+.padding-top-md {
     @include padding(top, $space-md);
 }
-.padding-md-right {
+.padding-right-md {
     @include padding(right, $space-md);
 }
-.padding-md-bottom {
+.padding-bottom-md {
     @include padding(bottom, $space-md);
 }
-.padding-md-left {
+.padding-left-md {
     @include padding(left, $space-md);
 }
 
@@ -521,22 +568,22 @@
 .padding-sm {
     @include padding(all, $space-sm);
 }
-.padding-sm-x {
+.padding-x-sm {
     @include padding(x, $space-sm);
 }
-.padding-sm-y {
+.padding-y-sm {
     @include padding(y, $space-sm);
 }
-.padding-sm-top {
+.padding-top-sm {
     @include padding(top, $space-sm);
 }
-.padding-sm-right {
+.padding-right-sm {
     @include padding(right, $space-sm);
 }
-.padding-sm-bottom {
+.padding-bottom-sm {
     @include padding(bottom, $space-sm);
 }
-.padding-sm-left {
+.padding-left-sm {
     @include padding(left, $space-sm);
 }
 
@@ -545,22 +592,22 @@
 .margin-lg {
     @include margin(all, $space-lg);
 }
-.margin-lg-x {
+.margin-x-lg {
     @include margin(x, $space-lg);
 }
-.margin-lg-y {
+.margin-y-lg {
     @include margin(y, $space-lg);
 }
-.margin-lg-top {
+.margin-top-lg {
     @include margin(top, $space-lg);
 }
-.margin-lg-right {
+.margin-right-lg {
     @include margin(right, $space-lg);
 }
-.margin-lg-bottom {
+.margin-bottom-lg {
     @include margin(bottom, $space-lg);
 }
-.margin-lg-left {
+.margin-left-lg {
     @include margin(left, $space-lg);
 }
 
@@ -569,22 +616,22 @@
 .margin-md {
     @include margin(all, $space-md);
 }
-.margin-md-x {
+.margin-x-md {
     @include margin(x, $space-md);
 }
-.margin-md-y {
+.margin-y-md {
     @include margin(y, $space-md);
 }
-.margin-md-top {
+.margin-top-md {
     @include margin(top, $space-md);
 }
-.margin-md-right {
+.margin-right-md {
     @include margin(right, $space-md);
 }
-.margin-md-bottom {
+.margin-bottom-md {
     @include margin(bottom, $space-md);
 }
-.margin-md-left {
+.margin-left-md {
     @include margin(left, $space-md);
 }
 
@@ -593,22 +640,22 @@
 .margin-sm {
     @include margin(all, $space-sm);
 }
-.margin-sm-x {
+.margin-x-sm {
     @include margin(x, $space-sm);
 }
-.margin-sm-y {
+.margin-y-sm {
     @include margin(y, $space-sm);
 }
-.margin-sm-top {
+.margin-top-sm {
     @include margin(top, $space-sm);
 }
-.margin-sm-right {
+.margin-right-sm {
     @include margin(right, $space-sm);
 }
-.margin-sm-bottom {
+.margin-bottom-sm {
     @include margin(bottom, $space-sm);
 }
-.margin-sm-left {
+.margin-left-sm {
     @include margin(left, $space-sm);
 }
 
@@ -619,16 +666,16 @@
 .radius-lg {
     @include radius(all, $radius-lg);
 }
-.radius-lg-left {
+.radius-left-lg {
     @include radius(left, $radius-lg);
 }
-.radius-lg-right {
+.radius-right-lg {
     @include radius(right, $radius-lg);
 }
-.radius-lg-top {
+.radius-top-lg {
     @include radius(top, $radius-lg);
 }
-.radius-lg-bottom {
+.radius-bottom-lg {
     @include radius(bottom, $radius-lg);
 }
 
@@ -637,15 +684,15 @@
 .radius-md {
     @include radius(all, $radius-md);
 }
-.radius-md-left {
+.radius-left-md {
     @include radius(left, $radius-md);
 }
-.radius-md-right {
+.radius-right-md {
     @include radius(right, $radius-md);
 }
-.radius-md-top {
+.radius-top-md {
     @include radius(top, $radius-md);
 }
-.radius-md-bottom {
+.radius-bottom-md {
     @include radius(bottom, $radius-md);
 }

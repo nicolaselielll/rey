@@ -19,16 +19,13 @@ $error: #D92B2B;
 $error-alt-1: rgba($error, .1);
 
 $alt-1-o: .5;
-$alt-2-o: .08;
-$alt-3-o: .06;
-$alt-4-o: .03;
+$alt-2-o: .12;
 
 $alt-1: rgba($primary, $alt-1-o);
 $alt-2: rgba($primary, $alt-2-o);
-$alt-3: rgba($primary, $alt-3-o);
-$alt-4: rgba($primary, $alt-4-o);
 
-$border: $alt-3;
+$border: $alt-2;
+$border-dominant: rgba($dominant, $alt-2-o);
 
 html, body {
     background-color: $dominant;
@@ -106,12 +103,12 @@ $mobile-base-font-size: calc($mobile-base-px / $mobile-screen * 100); // VW
 } */
 
 html {
-    font-size: $desktop-base-px;
+    font-size: calc(1vw * $desktop-base-font-size);
 }
 
 @include bp-xl {
     html {
-        font-size: $desktop-base-px
+        font-size: calc(1vw * $desktop-base-font-size);
     }
 }
 
@@ -158,7 +155,7 @@ html {
 
 // SPACING
 
-$space-lg: 1rem; // 14px
+$space-lg: 1rem; // 16px
 $space-md: .625rem; // 10px
 $space-sm: .5rem; // 8px
 

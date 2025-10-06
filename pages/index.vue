@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <span class="span-lg">Reinvent Yellow website coming soon</span>
+        <HomeHero />
     </div>
 </template>
 
@@ -15,8 +15,5 @@ export default {
 <style lang="scss" scoped>
 .home {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 </style>
