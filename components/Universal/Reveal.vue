@@ -2,7 +2,7 @@
     <div class="reveal dominant-bg">
         <div class="reveal-box">
             <div class="reveal-image-container">
-                <video class="reveal-video" autoplay muted loop>
+                <video class="reveal-video" autoplay muted loop playsinline preload="auto">
                     <source src="/media/reel.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -63,9 +63,35 @@ export default {
             
             const video = document.querySelector('.reveal-video')
             if (video) {
-                video.play().catch(err => {
-                    console.log('Video autoplay failed:', err)
-                })
+                // Force load the video
+                video.load()
+                
+                // Try multiple approaches for mobile compatibility
+                const playVideo = async () => {
+                    try {
+                        await video.play()
+                        console.log('Video started playing')
+                    } catch (err) {
+                        console.log('Video autoplay failed, trying fallback:', err)
+                        
+                        // Fallback: try to play after a short delay
+                        setTimeout(async () => {
+                            try {
+                                await video.play()
+                                console.log('Video started playing with delay')
+                            } catch (secondErr) {
+                                console.log('Video play failed completely:', secondErr)
+                            }
+                        }, 100)
+                    }
+                }
+                
+                // For mobile: wait for video to be loaded
+                if (video.readyState >= 3) {
+                    playVideo()
+                } else {
+                    video.addEventListener('canplay', playVideo, { once: true })
+                }
             }
             
             reveal()
