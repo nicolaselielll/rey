@@ -3,15 +3,15 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
     app: {
         head: {
-            titleTemplate: '%s - Reinvent Yellow',
+            titleTemplate: '%s - From Nordic roots to global reach',
             title: 'Reinvent Yellow',
             meta: [
                 { charset: 'utf-8' },
                 { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" },
-                { hid: 'description', name: 'description', content: 'Description' }
+                { hid: 'description', name: 'description', content: 'Reinvent Yellow - From Nordic roots to global reach. We unite creativity, capital, and technology to build stories that travel.' }
             ],
             link: [
-                { rel: 'icon', type: 'image/svg', href: '/icons/star.svg' },
+                { rel: 'icon', type: 'image/svg', href: '/logo.svg' },
                 { href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel: 'stylesheet' }
             ],
             script: [
