@@ -23,7 +23,7 @@
             </div>
             <div class="details-container grid grid-cols-12 gap-md align-end">
                 <div class="announcement-box dominant-bg padding-md flex-column justify-between primary" style="grid-column: 1 / 4;">
-                    <p class="p-sm">Yellow Studios and Reinvent Studios Unite to Form a Nordic Powerhouse in Film and TV</p>
+                    <p class="p-sm">We are the combined force of Reinvent and Yellow <br></br>— a full-spectrum studio at the intersection of distribution, production, and tech innovation.</p>
                     <div class="flex justify-between align-center">
                         <p class="p-sm">Full website coming soon</p>
                         <div class="primary-bg" style="border-radius: 5rem; height: .625rem; width: .625rem"></div>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="info-col flex-column justify-between height-100" style="grid-column: 8 / 13;">
                     <div class="list-container grid grid-cols-2 gap-md">
-                        <p class="p-sm list-label">Reinvent Yellow <br></br>Companies</p>
+                        <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
                             <p class="p-sm list-item underline pointer">Yellow Film & TV</p>
                             <p class="p-sm list-item underline pointer">Reinvent Studios</p>
@@ -63,7 +63,7 @@
                 <h1 class="h1 heading" style="margin-bottom: 5rem;">Reinvent Yellow - <br>From Nordic roots to international horizons. We unite creativity, capital, and technology.</h1>
                 <div class="info-container">
                     <div class="list-container grid grid-cols-2 gap-md" style="margin-bottom: 2.5rem;">
-                        <p class="p-sm list-label">Reinvent Yellow <br></br>Companies</p>
+                        <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
                             <p class="p-sm list-item underline pointer">Yellow Film & TV</p>
                             <p class="p-sm list-item underline pointer">Reinvent Studios</p>
