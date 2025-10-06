@@ -18,8 +18,8 @@
                 </div>
             </div>
             <div class="heading-container border-bottom-dominant grid grid-cols-12 padding-bottom-md">
-                <h2 class="h2 left-heading" style="grid-column: 1 / 6;">Reinvent Yellow - <br></br>A European Powerhouse <br>for Storytelling.</h2>
-                <h2 class="h2 right-heading" style="grid-column: 9 / 13;">Hub for Creativity, Technology, and Business.</h2>
+                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br></br>From Nordic roots to international horizons</h2>
+                <h2 class="h2 right-heading" style="grid-column: 8 / 13;">We unite creativity, capital, and technology to build stories that travel.</h2>
             </div>
             <div class="details-container grid grid-cols-12 gap-md align-end">
                 <div class="announcement-box dominant-bg padding-md flex-column justify-between primary" style="grid-column: 1 / 4;">
@@ -29,7 +29,7 @@
                         <div class="primary-bg" style="border-radius: 5rem; height: .625rem; width: .625rem"></div>
                     </div>
                 </div>
-                <div class="info-col flex-column justify-between height-100" style="grid-column: 9 / 13;">
+                <div class="info-col flex-column justify-between height-100" style="grid-column: 8 / 13;">
                     <div class="list-container grid grid-cols-2 gap-md">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Companies</p>
                         <div class="list">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="hero-main">
-                <h1 class="h1 heading">Reinvent Yellow - A European Powerhouse for Storytelling. Hub for Creativity, Technology, and Business.</h1>
+                <h1 class="h1 heading" style="margin-bottom: 5rem;">Reinvent Yellow - From Nordic roots to international horizons. Uniting creativity, capital, and technology to build stories.</h1>
                 <div class="info-container">
                     <div class="list-container grid grid-cols-2 gap-md" style="margin-bottom: 2.5rem;">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Companies</p>
@@ -124,7 +124,7 @@ export default {
             }
     
             .menu-col {
-                grid-column: 9 / 13
+                grid-column: 8 / 13
             }
         }
     
@@ -145,9 +145,6 @@ export default {
         }
 
         .hero-main {
-            .heading {
-                margin-bottom: 5.5rem;
-            }
         }
     }
 }
