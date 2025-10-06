@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="hero-main">
-                <h1 class="h1 heading" style="margin-bottom: 5rem;">Reinvent Yellow - From Nordic roots to international horizons. Uniting creativity, capital, and technology to build stories.</h1>
+                <h1 class="h1 heading" style="margin-bottom: 5rem;">Reinvent Yellow - From Nordic roots to international horizons — we unite creativity, capital, and technology to build stories that travel.</h1>
                 <div class="info-container">
                     <div class="list-container grid grid-cols-2 gap-md" style="margin-bottom: 2.5rem;">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Companies</p>
