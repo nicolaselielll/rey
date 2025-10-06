@@ -32,10 +32,10 @@
                     <div class="list-container grid grid-cols-2 gap-md">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
-                            <p class="p-sm list-item underline pointer">Yellow Film & TV</p>
-                            <p class="p-sm list-item underline pointer">Reinvent Studios</p>
-                            <p class="p-sm list-item underline pointer">Newgrange Pictures</p>
-                            <p class="p-sm list-item underline pointer">255 Pix</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://www.yellowfilm.fi/')">Yellow Film & TV</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Studios</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://newgrangepictures.com/')">Newgrange Pictures</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://www.255pix.com/')">255 Pix</p>
                         </div>
                     </div>
                     <div class="list-container grid grid-cols-2 gap-md">
@@ -60,23 +60,23 @@
             </div>
             <div class="hero-main">
                 <div class="heading-wrapper flex-column gap-md">
-                    <p class="p-sm">Reinvent Yellow - <br>From Nordic roots to global reach</p>
-                    <h1 class="h1 heading" style="margin-bottom: 4rem;">We unite creativity, capital, and technology to build stories that travel.</h1>
+                    <p class="p-sm">From Nordic roots <br>to global reach</p>
+                    <h1 class="h1 heading" style="margin-bottom: 4rem;">Reinvent Yellow - <br>We unite creativity, capital, and technology to build stories that travel.</h1>
                 </div>
                 <div class="info-container border-top-dominant padding-top-md">
-                    <div class="list-container grid grid-cols-2 gap-md" style="margin-bottom: 2.5rem;">
+                    <div class="list-container grid grid-cols-2" style="margin-bottom: 2.5rem;">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
-                            <p class="p-sm list-item underline pointer">Yellow Film & TV</p>
-                            <p class="p-sm list-item underline pointer">Reinvent Studios</p>
-                            <p class="p-sm list-item underline pointer">Newgrange Pictures</p>
-                            <p class="p-sm list-item underline pointer">255 Pix</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://www.yellowfilm.fi/')">Yellow Film & TV</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Studios</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://newgrangepictures.com/')">Newgrange Pictures</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://www.255pix.com/')">255 Pix</p>
                         </div>
                     </div>
-                    <div class="list-container grid grid-cols-2 gap-md">
-                        <p class="p-sm list-label">Contact us</p>
+                    <div class="list-container grid grid-cols-2">
+                        <p class="p-sm list-label">Locations</p>
                         <div class="list">
-                            <p class="p-sm list-item underline pointer">hello@reinventyellow.com</p>
+                            <p class="p-sm list-item underline pointer">Copenhagen, Dublin, Helsinki</p>
                         </div>
                     </div>
                 </div>

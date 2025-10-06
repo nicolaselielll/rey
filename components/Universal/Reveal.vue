@@ -61,7 +61,6 @@ export default {
         onMounted(async () => {
             await nextTick()
             
-            // Start video playback
             const video = document.querySelector('.reveal-video')
             if (video) {
                 video.play().catch(err => {
