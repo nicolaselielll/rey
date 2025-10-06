@@ -76,7 +76,7 @@
                     <div class="list-container grid grid-cols-2">
                         <p class="p-sm list-label">Locations</p>
                         <div class="list">
-                            <p class="p-sm list-item underline pointer">Copenhagen, Dublin, Helsinki</p>
+                            <p class="p-sm list-item">Copenhagen, Dublin, Helsinki</p>
                         </div>
                     </div>
                 </div>
