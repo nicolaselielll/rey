@@ -94,7 +94,7 @@ export default {
 <style lang="scss" scoped>
 .hero {
     height: 100svh; 
-    background-image: url('/images/Pohjoisen_tahti_S02-EPS8-HenryHanikka-SaaraKotkaniemi-EeroSaarinen-PhotoByMitroHärkönen.jpg');
+    background-image: url('/images/pohjoisen_tahti.jpg');
 
     .bg-layer {
         position: absolute;
