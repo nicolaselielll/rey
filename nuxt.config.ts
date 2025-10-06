@@ -11,7 +11,7 @@ export default defineNuxtConfig({
                 { hid: 'description', name: 'description', content: 'From Nordic roots to global reach. We unite creativity, capital, and technology to build stories that travel.' }
             ],
             link: [
-                { rel: 'icon', type: 'image/svg', href: '/logo.svg' },
+                { rel: 'icon', type: 'image/svg', href: '/favicon.svg' },
                 { href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel: 'stylesheet' }
             ],
             script: [
