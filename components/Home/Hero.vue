@@ -1,31 +1,30 @@
 <template>
-    <div class="hero dominant padding-x-md padding-bottom-md bg-default">
-        <div class="bg-layer"></div>
+    <div class="hero dominant padding-x-md padding-bottom-md">
         <div class="desktop-hero flex flex-column justify-between height-100">
             <div class="hero-header grid grid-cols-12 gap-md align-center">
                 <div class="logo-col">
                     <img 
                         src="/logo.svg" 
                         alt="Reinvent Yellow Logo" 
-                        class="logo position-absolute left-md top-md"
+                        class="logo position-absolute top-md"
                     />
                 </div>
                 <div class="menu-col flex justify-between align-center">
                     <div class="hero-menu">
-                        <span class="span-sm">hello@reinventyellow.com</span>
+                        <span class="span-sm">Full website coming sooon</span>
                     </div>
-                    <span class="span-sm">Contact</span>
+                    <span class="span-sm clock">{{ currentTime }}</span>
                 </div>
             </div>
             <div class="heading-container border-bottom-dominant grid grid-cols-12 padding-bottom-md">
-                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br></br>From Nordic roots to international horizons</h2>
+                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br>From Nordic roots to global reach</h2>
                 <h2 class="h2 right-heading" style="grid-column: 8 / 13;">We unite creativity, capital, and technology to build stories that travel.</h2>
             </div>
             <div class="details-container grid grid-cols-12 gap-md align-end">
                 <div class="announcement-box dominant-bg padding-md flex-column justify-between primary" style="grid-column: 1 / 4;">
-                    <p class="p-sm">We are the combined force of Reinvent and Yellow <br></br>— a full-spectrum studio at the intersection of distribution, production, and tech innovation.</p>
+                    <p class="p-sm">Reinvent and Yellow have joined forces as a full-spectrum studio in distribution, production, and tech innovation.</p>
                     <div class="flex justify-between align-center">
-                        <p class="p-sm">Full website coming soon</p>
+                        <p class="p-sm">Sales / Financing / Tech / Story</p>
                         <div class="primary-bg" style="border-radius: 5rem; height: .625rem; width: .625rem"></div>
                     </div>
                 </div>
@@ -55,13 +54,16 @@
                     <img 
                         src="/logo.svg" 
                         alt="Reinvent Yellow Logo" 
-                        class="logo position-absolute left-md top-md"
+                        class="logo position-absolute top-md"
                     />
                 </div>
             </div>
             <div class="hero-main">
-                <h1 class="h1 heading" style="margin-bottom: 5rem;">Reinvent Yellow - <br>From Nordic roots to international horizons. We unite creativity, capital, and technology.</h1>
-                <div class="info-container">
+                <div class="heading-wrapper flex-column gap-md">
+                    <p class="p-sm">Reinvent Yellow - <br>From Nordic roots to global reach</p>
+                    <h1 class="h1 heading" style="margin-bottom: 4rem;">We unite creativity, capital, and technology to build stories that travel.</h1>
+                </div>
+                <div class="info-container border-top-dominant padding-top-md">
                     <div class="list-container grid grid-cols-2 gap-md" style="margin-bottom: 2.5rem;">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
@@ -80,13 +82,38 @@
                 </div>
             </div>
         </div>
+        <div class="bg-layer"></div>
+        <UniversalReveal />
     </div>
 </template>
 
 <script>
 export default {
     setup () {
-        return {}
+        const currentTime = ref('')
+        let timeInterval = null
+
+        const updateTime = () => {
+            const now = new Date()
+            const hours = now.getHours().toString().padStart(2, '0')
+            const minutes = now.getMinutes().toString().padStart(2, '0')
+            currentTime.value = `${hours}:${minutes}`
+        }
+
+        onMounted(() => {
+            updateTime() // Set initial time
+            timeInterval = setInterval(updateTime, 1000) // Update every second
+        })
+
+        onUnmounted(() => {
+            if (timeInterval) {
+                clearInterval(timeInterval)
+            }
+        })
+
+        return {
+            currentTime
+        }
     }
 }
 </script>
@@ -94,7 +121,7 @@ export default {
 <style lang="scss" scoped>
 .hero {
     height: 100svh; 
-    background-image: url('/images/pohjoisen_tahti.jpg');
+    position: relative;
 
     .bg-layer {
         position: absolute;
@@ -102,13 +129,15 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 0;
+        background: rgba(#000, .1);
+        z-index: 1;
+        opacity: 0;
     }
 
     .desktop-hero {
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        opacity: 0;
         @include bp-lg {
             display: none;
         }
@@ -137,7 +166,8 @@ export default {
 
     .mobile-hero {
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        opacity: 0;
         .hero-header {
             .logo {
                 width: 5rem;
