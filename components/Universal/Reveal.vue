@@ -85,7 +85,6 @@ export default {
             await nextTick()
             initTextSwap()
             
-            // Set initial state for video
             gsap.set('.reveal-video', { scale: 4 })
             
             tl.to('.reveal-image-container', {
@@ -105,7 +104,6 @@ export default {
                 ease: 'expo.inOut',
                 y: '-100%',
                 onStart: () => {
-                    // Start video when curtain animation begins
                     const video = document.querySelector('.reveal-video')
                     if (video) {
                         video.play().catch(err => {
@@ -135,7 +133,10 @@ export default {
                 opacity: 1,
                 duration: 1.4,
                 delay: .4,
-                ease: 'expo'
+                ease: 'expo',
+                onComplete: () => {
+                    gsap.set('.reveal-text-wrapper', { display: 'none' })
+                }
             })
         }
 
