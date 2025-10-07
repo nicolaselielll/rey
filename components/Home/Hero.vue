@@ -11,12 +11,12 @@
                 </div>
                 <div class="menu-col flex justify-between align-center">
                     <div class="hero-menu">
-                        <span class="span-sm">Full website coming sooon</span>
+                        <span class="span-sm">Full website coming soon</span>
                     </div>
                     <span class="span-sm clock">{{ currentTime }}</span>
                 </div>
             </div>
-            <div class="heading-container border-bottom-dominant grid grid-cols-12 padding-bottom-md">
+            <div class="heading-container grid grid-cols-12 padding-bottom-md">
                 <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br>From Nordic roots to global reach</h2>
                 <h2 class="h2 right-heading" style="grid-column: 8 / 13;">We unite creativity, capital, and technology to build stories that travel.</h2>
             </div>
