@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="heading-container grid grid-cols-12 padding-bottom-md">
-                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br>From Nordic roots to global reach</h2>
+                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br>From Nordic roots to global reach.</h2>
                 <h2 class="h2 right-heading" style="grid-column: 8 / 13;">We unite creativity, capital, and technology to build stories that travel.</h2>
             </div>
             <div class="details-container grid grid-cols-12 gap-md align-end">
