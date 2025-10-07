@@ -1,7 +1,7 @@
 <template>
     <div class="reveal dominant-bg flex align-center justify-center">
         <div class="reveal-text-wrapper primary overflow-hidden padding-y-sm">
-            <span class="span-sm text-align-center reveal-text">Reinvent Sales</span>
+            <span class="span-sm text-align-center reveal-text">Reinvent Yellow</span>
             <div class="anim-text-container overflow-hidden">
                 <div class="anim-text-wrapper reveal-text">
                     <span class="span-sm text-align-center swap-text">Sales company</span>

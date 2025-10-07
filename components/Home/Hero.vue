@@ -5,19 +5,19 @@
                 <div class="logo-col">
                     <img 
                         src="/logo.svg" 
-                        alt="Reinvent Sales Logo" 
+                        alt="Reinvent Yellow Logo" 
                         class="logo position-absolute top-md"
                     />
                 </div>
                 <div class="menu-col flex justify-between align-center">
                     <div class="hero-menu">
-                        <span class="span-sm">Full website coming soon</span>
+                        <span class="span-sm">Full website coming sooon</span>
                     </div>
                     <span class="span-sm clock">{{ currentTime }}</span>
                 </div>
             </div>
-            <div class="heading-containe grid grid-cols-12 padding-bottom-md">
-                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Sales - <br>From Nordic roots to global reach.</h2>
+            <div class="heading-container border-bottom-dominant grid grid-cols-12 padding-bottom-md">
+                <h2 class="h2 left-heading" style="grid-column: 1 / 5;">Reinvent Yellow - <br>From Nordic roots to global reach</h2>
                 <h2 class="h2 right-heading" style="grid-column: 8 / 13;">We unite creativity, capital, and technology to build stories that travel.</h2>
             </div>
             <div class="details-container grid grid-cols-12 gap-md align-end">
@@ -30,10 +30,10 @@
                 </div>
                 <div class="info-col flex-column justify-between height-100" style="grid-column: 8 / 13;">
                     <div class="list-container grid grid-cols-2 gap-md">
-                        <p class="p-sm list-label">Reinvent Sales <br></br>Subsidiaries</p>
+                        <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
                             <p class="p-sm list-item underline pointer" @click="newTab('https://www.yellowfilm.fi/')">Yellow Film & TV</p>
-                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Studios</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Sales</p>
                             <p class="p-sm list-item underline pointer" @click="newTab('https://newgrangepictures.com/')">Newgrange Pictures</p>
                             <p class="p-sm list-item underline pointer" @click="newTab('https://www.255pix.com/')">255 Pix</p>
                         </div>
@@ -53,7 +53,7 @@
                 <div class="logo-col">
                     <img 
                         src="/logo.svg" 
-                        alt="Reinvent Sales Logo" 
+                        alt="Reinvent Yellow Logo" 
                         class="logo position-absolute top-md"
                     />
                 </div>
@@ -61,14 +61,14 @@
             <div class="hero-main">
                 <div class="heading-wrapper flex-column gap-md">
                     <p class="p-sm">From Nordic roots <br>to global reach</p>
-                    <h1 class="h1 heading" style="margin-bottom: 4rem;">Reinvent Sales - <br>We unite creativity, capital, and technology to build stories that travel.</h1>
+                    <h1 class="h1 heading" style="margin-bottom: 4rem;">Reinvent Yellow - <br>We unite creativity, capital, and technology to build stories that travel.</h1>
                 </div>
                 <div class="info-container border-top-dominant padding-top-md">
                     <div class="list-container grid grid-cols-2" style="margin-bottom: 2.5rem;">
-                        <p class="p-sm list-label">Reinvent Sales <br></br>Subsidiaries</p>
+                        <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
                             <p class="p-sm list-item underline pointer" @click="newTab('https://www.yellowfilm.fi/')">Yellow Film & TV</p>
-                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Studios</p>
+                            <p class="p-sm list-item underline pointer" @click="newTab('https://reinvent.dk/')">Reinvent Sales</p>
                             <p class="p-sm list-item underline pointer" @click="newTab('https://newgrangepictures.com/')">Newgrange Pictures</p>
                             <p class="p-sm list-item underline pointer" @click="newTab('https://www.255pix.com/')">255 Pix</p>
                         </div>
