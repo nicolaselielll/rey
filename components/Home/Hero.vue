@@ -63,7 +63,7 @@
                     <p class="p-sm">From Nordic roots <br>to global reach</p>
                     <h1 class="h1 heading" style="margin-bottom: 4rem;">Reinvent Yellow - <br>We unite creativity, capital, and technology to build stories that travel.</h1>
                 </div>
-                <div class="info-container border-top-dominant padding-top-md">
+                <div class="info-container">
                     <div class="list-container grid grid-cols-2" style="margin-bottom: 2.5rem;">
                         <p class="p-sm list-label">Reinvent Yellow <br></br>Subsidiaries</p>
                         <div class="list">
