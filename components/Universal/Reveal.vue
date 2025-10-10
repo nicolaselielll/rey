@@ -115,7 +115,7 @@ export default {
             tl.to('.reveal-video', {
                 duration: 2,
                 ease: 'expo.inOut',
-                scale: 1,
+                scale: 2,
             }, '<')
             tl.to('.reveal-box', {
                 duration: 1.4,
@@ -124,6 +124,11 @@ export default {
                 delay: '.4',
                 width: '100%',
             })
+            tl.to('.reveal-video', {
+                ease: 'expo.inOut',
+                scale: 1,
+                duration: 1.4,
+            }, '<')
             tl.to('.bg-layer', {
                 opacity: 1,
                 duration: 1.4,
@@ -166,7 +171,7 @@ export default {
 
 <style lang="scss" scoped>
 .reveal {
-    height: 100svh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -211,6 +216,7 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        will-change: transform;
 
         @include bp-md {
             width: 7rem;
@@ -228,6 +234,8 @@ export default {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transform: scale(2);
+                will-change: transform;
             }
 
             .accent-curtain {
